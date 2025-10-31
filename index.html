@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modo Monte - Glamping en Córdoba</title>
+    
+    <!-- Carga de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Carga de Fuentes de Google (Inter para cuerpo, EB Garamond para títulos) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Carga de Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        /* Estilos personalizados para aplicar las fuentes */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f1ee; /* Un color base beige claro */
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'EB Garamond', serif;
+        }
+        
+        /* Colores personalizados extraídos de la imagen */
+        .bg-custom-olive { background-color: #5a6451; }
+        .text-custom-olive { color: #5a6451; }
+        
+        .bg-custom-beige-light { background-color: #e6dace; }
+        .text-custom-beige-light { color: #e6dace; }
+        
+        .bg-custom-brown { background-color: #8c5a3b; }
+        .text-custom-brown { color: #8c5a3b; }
+        
+        .bg-custom-brown-dark { background-color: #5c3a22; }
+        .text-custom-brown-dark { color: #5c3a22; }
+        
+        /* Sombra de texto para mejor legibilidad sobre imágenes */
+        .text-shadow {
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- ===== SECCIÓN DE INICIO (HERO) ===== -->
+    <header class="relative h-screen w-full flex items-center justify-center text-center text-white overflow-hidden">
+        <!-- Imagen de fondo -->
+        <div class="absolute inset-0 z-0">
+            <img 
+                src="https://placehold.co/1080x1920/5a6451/white?text=Modo+Monte+Hero" 
+                alt="Vista de glamping en las sierras" 
+                class="w-full h-full object-cover"
+                onerror="this.src='https://placehold.co/1080x1920/5a6451/white?text=Imagen+no+disponible'"
+            >
+            <!-- Capa oscura para legibilidad -->
+            <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+        </div>
+        
+        <!-- Contenido del Hero -->
+        <div class="relative z-10 flex flex-col items-center px-4">
+            <!-- Logo (Icono de hoja como el del diseño) -->
+            <!-- [COMENTARIO: Logo SVG eliminado como solicitaste] -->
+            
+            <!-- 
+                - Se cambió el texto a "MODO · MONTE".
+                - Se agregó 'font-sans' para usar la tipografía Inter.
+                - Se agregó 'pt-16' para compensar el espacio del logo eliminado.
+            -->
+            <h1 class="text-6xl md:text-8xl font-bold tracking-wider text-shadow font-sans pt-16">
+                MODO · MONTE
+            </h1>
+            <p class="mt-2 text-xl md:text-2xl font-light text-shadow">
+                Más que un alojamiento, una experiencia.
+            </p>
+            <p class="mt-4 text-lg md:text-xl font-semibold tracking-widest text-shadow">
+                GLAMPING / RÍO CEBALLOS / CÓRDOBA
+            </p>
+        </div>
+    </header>
+
+    <!-- ===== SECCIÓN INTRODUCCIÓN ===== -->
+    <section class="bg-white py-16 px-6 text-center">
+        <div class="max-w-3xl mx-auto">
+            <p class="text-lg md:text-xl text-custom-brown-dark leading-relaxed">
+                Te invitamos a disfrutar de un alojamiento que combina la comodidad de un hotel con la inmersión en el medio serrano. Nuestros domos están equipados con comodidades modernas, proporcionando un espacio óptimo para relajarse y descansar.
+            </p>
+        </div>
+    </section>
+
+    <!-- ===== SECCIÓN NAVEGACIÓN ICONOS ===== -->
+    <section class="grid grid-cols-3">
+        <!-- Ubicación -->
+        <a href="#ubicacion" class="flex flex-col items-center justify-center p-8 h-40 md:h-56 bg-custom-olive text-white text-center transition-opacity hover:opacity-90">
+            <i data-lucide="map-pin" class="w-10 h-10 md:w-12 md:h-12 mb-2"></i>
+            <span class="text-lg md:text-xl font-semibold tracking-wider">UBICACIÓN</span>
+        </a>
+        <!-- Nosotros -->
+        <a href="#nosotros" class="flex flex-col items-center justify-center p-8 h-40 md:h-56 bg-custom-beige-light text-custom-brown-dark text-center transition-opacity hover:opacity-90">
+            <i data-lucide="users" class="w-10 h-10 md:w-12 md:h-12 mb-2"></i>
+            <span class="text-lg md:text-xl font-semibold tracking-wider">NOSOTROS</span>
+        </a>
+        <!-- Amenities -->
+        <a href="#amenities" class="flex flex-col items-center justify-center p-8 h-40 md:h-56 bg-custom-brown text-white text-center transition-opacity hover:opacity-90">
+            <i data-lucide="coffee" class="w-10 h-10 md:w-12 md:h-12 mb-2"></i>
+            <span class="text-lg md:text-xl font-semibold tracking-wider">AMENITIES</span>
+        </a>
+    </section>
+    
+    <!-- ===== SECCIÓN ALOJAMIENTO ===== -->
+    <section class="relative min-h-[60vh] flex items-center justify-center bg-cover bg-center" style="background-image: url('https://placehold.co/1200x600/5c3a22/white?text=Domo+Geod%C3%A9sico');">
+        <!-- Capa oscura para legibilidad -->
+        <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+        <div class="relative z-10 text-center">
+            <h2 class="text-5xl md:text-7xl font-bold text-white tracking-wider text-shadow">
+                ALOJAMIENTO
+            </h2>
+        </div>
+    </section>
+    
+    <!-- ===== SECCIÓN EXPERIENCIAS ===== -->
+    <section class="relative min-h-[80vh] flex flex-col items-center justify-center bg-cover bg-center py-16 px-6" style="background-image: url('https://placehold.co/1200x800/8c5a3b/white?text=Paisaje+Serrano');">
+        <!-- Capa oscura para legibilidad -->
+        <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+        
+        <div class="relative z-10 text-center text-white">
+            <h2 class="text-5xl md:text-7xl font-bold tracking-wider text-shadow mb-12">
+                EXPERIENCIAS
+            </h2>
+            
+            <!-- Sub-secciones de experiencias -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="p-6 rounded-lg backdrop-blur-sm bg-white/10">
+                    <h3 class="text-2xl font-semibold">CAMINATAS PROGRAMADAS</h3>
+                </div>
+                <div class="p-6 rounded-lg backdrop-blur-sm bg-white/10">
+                    <h3 class="text-2xl font-semibold">NUESTROS LUGARES PREFERIDOS</h3>
+                </div>
+                <div class="p-6 rounded-lg backdrop-blur-sm bg-white/10">
+                    <h3 class="text-2xl font-semibold">TIROLESA AVENTURA</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ===== SECCIÓN CTA / FAUNA ===== -->
+    <section class="bg-custom-beige-light py-16 px-6">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-5xl">
+            <!-- Imagen Fauna -->
+            <div class="flex justify-center">
+                <img 
+                    src="https://placehold.co/400x400/8c5a3b/white?text=Fauna+Local" 
+                    alt="Zorro de las sierras" 
+                    class="rounded-lg object-cover w-64 h-64 md:w-80 md:h-80 shadow-lg"
+                    onerror="this.src='https://placehold.co/400x400/8c5a3b/white?text=Imagen+no+disponible'"
+                >
+            </div>
+            
+            <!-- Texto CTA -->
+            <div class="text-center md:text-left">
+                <div class="flex justify-center md:justify-start items-center gap-4 mb-4">
+                    <i data-lucide="thumbs-up" class="w-12 h-12 text-custom-brown-dark"></i>
+                    <h2 class="text-3xl md:text-4xl font-bold text-custom-brown-dark">
+                        ¿CÓMO LA PASASTE EN MODO MONTE?
+                    </h2>
+                </div>
+                <p class="text-lg text-custom-brown-dark">
+                    ¡Nos encantaría conocer tu opinión! Déjanos tu reseña en nuestras redes.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="bg-custom-brown-dark text-white py-12 px-6">
+        <div class="container mx-auto max-w-5xl flex flex-col items-center text-center">
+            <h3 class="text-2xl font-semibold mb-6">CONTACTANOS</h3>
+            
+            <div class="flex flex-col md:flex-row gap-6 md:gap-12">
+                <!-- WhatsApp -->
+                <a href="https://wa.me/5493513265647" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-lg transition-colors hover:text-custom-beige-light">
+                    <i data-lucide="smartphone" class="w-6 h-6"></i>
+                    <span>+549 351 3265647</span>
+                </a>
+                
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/MODO.MONTE.ALPA" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-lg transition-colors hover:text-custom-beige-light">
+                    <i data-lucide="instagram" class="w-6 h-6"></i>
+                    <span>@MODO.MONTE.ALPA</span>
+                </a>
+            </div>
+            
+            <p class="mt-8 text-sm text-gray-400">
+                &copy; 2025 Runik. Todos los derechos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Script para inicializar Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
+
+
