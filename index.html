@@ -105,8 +105,7 @@
 
         <div class="relative z-10 mt-[-50px] px-4 animate-fade-in-up">
             <div class="mb-6 transition-transform duration-700 hover:scale-105 cursor-default">
-                <img src="./images/LOGOTIPO.png" alt="MODO MONTE"
-                    class="w-11/12 md:w-3/4 h-auto object-contain mx-auto">
+                <img src="./images/LOGOTIPO.png" alt="MODO MONTE" class="w-full md:w-3/4 h-auto object-contain mx-auto">
             </div>
             <p class="text-base md:text-lg font-light font-body lowercase tracking-wide mb-6 opacity-90">
                 más que un alojamiento... una experiencia
@@ -192,7 +191,7 @@
         <div class="container mx-auto px-4 relative h-full flex items-center z-20">
             <div class="w-full md:w-1/2 flex justify-center md:justify-start md:pl-20">
                 <h2
-                    class="text-4xl md:text-6xl text-mm-cream font-arca-bold tracking-widest text-center md:text-left transition-all duration-500 group-hover:tracking-[0.15em] group-hover:text-white">
+                    class="text-3xl md:text-6xl text-mm-cream font-arca-bold tracking-widest text-center md:text-left transition-all duration-500 group-hover:tracking-[0.15em] group-hover:text-white">
                     ALOJAMIENTO
                 </h2>
             </div>
@@ -203,7 +202,7 @@
            h-[125%] para que sobresalga más por la parte superior dado que el contenedor es más bajo.
         -->
         <div
-            class="absolute right-0 bottom-0 h-full w-1/2 flex items-end justify-end pointer-events-none md:pointer-events-auto z-10">
+            class="absolute right-0 bottom-0 h-full w-1/2 hidden md:flex items-end justify-end pointer-events-none md:pointer-events-auto z-10">
             <img src="./images/domo.png" alt="Domo" class="
                     relative
                     h-[115%] w-auto max-w-none
@@ -223,7 +222,7 @@
         </div>
 
         <div class="relative z-10 w-full px-4 text-white">
-            <h2 class="text-6xl md:text-8xl font-arca-bold mb-24 tracking-widest text-shadow cursor-default">
+            <h2 class="text-4xl md:text-8xl font-arca-bold mb-12 md:mb-24 tracking-widest text-shadow cursor-default">
                 EXPERIENCIAS</h2>
 
             <div
@@ -249,31 +248,48 @@
     </section>
 
     <!-- ===== 6. ZORRO / CTA ===== -->
-    <section class="bg-[#A66F5B] relative h-[500px] flex items-end justify-center overflow-visible z-20 group">
+    <section
+        class="bg-[#A66F5B] relative h-auto md:h-[500px] pt-20 pb-0 md:py-0 flex items-end justify-center overflow-visible z-20 group">
         <div class="absolute inset-0 opacity-10 bg-leaf-pattern z-0"></div>
         <img src="./images/background-footer.png" alt="Background Footer"
             class="absolute top-0 left-0 w-full h-full object-cover opacity-30 pointer-events-none z-0 mix-blend-overlay">
 
         <div
-            class="container mx-auto px-4 relative z-10 flex flex-col md:flex-row items-end justify-center h-full gap-10">
+            class="container mx-auto px-4 relative z-10 flex flex-col md:flex-row items-center md:items-end justify-center h-full gap-10">
 
             <!-- Zorro -->
             <div
                 class="relative z-30 mb-[-50px] md:mb-[-60px] md:mr-10 order-2 md:order-1 transform transition-all duration-500 hover:scale-110 hover:-translate-y-4 cursor-help">
-                <img src="./images/lobo.png" alt="Lobo" class="w-80 md:w-96 h-auto hover-sticker-border"
+                <img src="./images/lobo.png" alt="Lobo" class="w-96 md:w-[550px] h-auto hover-sticker-border"
                     style="mask-image: linear-gradient(black 85%, transparent 100%); border-radius: 20px;">
             </div>
 
             <!-- Texto -->
             <div
-                class="text-white flex flex-col items-center md:items-start text-center md:text-left mb-24 md:mb-32 order-1 md:order-2 group/text cursor-default">
-                <i data-lucide="thumbs-up"
-                    class="w-16 h-16 mb-4 stroke-[1.5] fill-none transition-transform duration-300 group-hover/text:-rotate-12 group-hover/text:scale-110"></i>
-                <h2
-                    class="text-3xl md:text-5xl font-arca-bold leading-tight uppercase tracking-wide transition-all duration-300 group-hover/text:text-mm-beige">
-                    COMO LA PASASTE<br>
-                    EN MODO MONTE?
-                </h2>
+                class="text-white flex flex-col items-center md:items-start text-center md:text-left mb-8 md:mb-32 order-1 md:order-2 group/text cursor-default">
+
+                <div class="relative">
+                    <h2
+                        class="text-2xl md:text-5xl font-arca-bold leading-tight uppercase tracking-wide transition-all duration-300 group-hover/text:text-mm-beige">
+                        COMO LA PASASTE<br>
+                        EN MODO MONTE?
+                    </h2>
+                    <div
+                        class="absolute -top-8 -right-8 md:-top-10 md:-right-12 w-12 h-12 md:w-16 md:h-16 transition-transform duration-300 group-hover/text:-rotate-12 group-hover/text:scale-110 flex items-center justify-center overflow-hidden">
+                        <img src="./images/like.png" alt="Like" class="w-full h-full object-cover scale-[2]">
+                    </div>
+                </div>
+
+                <p class="text-sm md:text-lg font-body font-medium mt-6 mb-2 opacity-90 leading-relaxed">
+                    recibe ofertas especiales y<br>
+                    fechas de caminatas
+                </p>
+
+                <a href="https://instagram.com/modo.monte.alpa" target="_blank"
+                    class="text-lg md:text-2xl font-arca-bold tracking-widest uppercase mt-2 hover:text-mm-beige transition-colors">
+                    UNITE A NUESTRO<br>
+                    CANAL DE INSTAGRAM
+                </a>
             </div>
         </div>
     </section>
