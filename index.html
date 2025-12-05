@@ -97,9 +97,10 @@
     <!-- ===== 1. HERO ===== -->
     <header
         class="relative h-[80vh] w-full flex flex-col items-center justify-center text-center text-white overflow-visible">
-        <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?q=80&w=1920&auto=format&fit=crop"
-                alt="Hero" class="w-full h-full object-cover brightness-[0.7]">
+        <div class="absolute inset-0 z-0 overflow-hidden">
+            <img id="parallax-header-img"
+                src="https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?q=80&w=1920&auto=format&fit=crop"
+                alt="Hero" class="w-full h-[140%] object-cover object-center -mt-[20%] brightness-[0.7]">
         </div>
 
         <div class="relative z-10 mt-[-50px] px-4 animate-fade-in-up">
@@ -152,8 +153,8 @@
             class="group bg-mm-sage h-64 md:h-full flex flex-col items-center justify-center text-white p-8 cursor-pointer transition-all duration-500 hover:bg-[#5a6150] overflow-hidden relative">
             <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition-opacity duration-500">
             </div>
-            <i data-lucide="map-pin"
-                class="w-16 h-16 mb-3 stroke-[1] transition-transform duration-500 group-hover:scale-125 group-hover:-rotate-12 group-hover:mb-5"></i>
+            <img src="./images/point.png" alt="Ubicación"
+                class="w-32 h-32 object-contain mb-3 transition-transform duration-500 group-hover:scale-125 group-hover:-rotate-12 group-hover:mb-5">
             <span
                 class="text-xl md:text-2xl font-arca-bold tracking-widest uppercase relative z-10 transition-all duration-300 group-hover:tracking-[0.2em]">UBICACIÓN</span>
         </div>
@@ -163,12 +164,8 @@
             class="group bg-mm-beige h-64 md:h-full flex flex-col items-center justify-center text-mm-brown p-8 cursor-pointer transition-all duration-500 hover:bg-[#dcd0c4] overflow-hidden relative">
             <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-500">
             </div>
-            <div class="flex mb-3 transition-transform duration-500 group-hover:scale-110 group-hover:mb-5">
-                <i data-lucide="hand"
-                    class="w-16 h-16 stroke-[1] transform -scale-x-100 -rotate-12 transition-transform duration-300 group-hover:-rotate-[25deg] group-hover:-translate-x-1"></i>
-                <i data-lucide="hand"
-                    class="w-16 h-16 stroke-[1] -ml-4 rotate-12 transition-transform duration-300 group-hover:rotate-[25deg] group-hover:translate-x-1"></i>
-            </div>
+            <img src="./images/manos.png" alt="Nosotros"
+                class="w-40 h-40 object-contain mb-3 transition-transform duration-500 group-hover:scale-110 group-hover:mb-5">
             <span
                 class="text-xl md:text-2xl font-arca-bold tracking-widest uppercase relative z-10 transition-all duration-300 group-hover:tracking-[0.2em]">NOSOTROS</span>
         </div>
@@ -178,8 +175,8 @@
             class="group bg-mm-terracotta h-64 md:h-full flex flex-col items-center justify-center text-white p-8 cursor-pointer transition-all duration-500 hover:bg-[#a67f6e] overflow-hidden relative">
             <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition-opacity duration-500">
             </div>
-            <i data-lucide="coffee"
-                class="w-16 h-16 mb-3 stroke-[1] transition-transform duration-500 group-hover:scale-125 group-hover:rotate-6 group-hover:mb-5"></i>
+            <img src="./images/taza.png" alt="Amenities"
+                class="w-28 h-28 object-contain mb-3 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6 group-hover:mb-5">
             <span
                 class="text-xl md:text-2xl font-arca-bold tracking-widest uppercase relative z-10 transition-all duration-300 group-hover:tracking-[0.2em]">AMENITIES</span>
         </div>
@@ -228,32 +225,32 @@
     <!-- ===== 5. EXPERIENCIAS ===== -->
     <section class="relative h-[500px] flex flex-col items-center justify-center text-center z-0 group">
         <div class="absolute inset-0 z-0 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1501555088652-021faa106b9b?q=80&w=1920&auto=format&fit=crop"
-                alt="Background"
-                class="w-full h-full object-cover brightness-[0.6] transition-transform duration-[10s] group-hover:scale-110">
+            <img id="parallax-experiences-img"
+                src="https://images.unsplash.com/photo-1501555088652-021faa106b9b?q=80&w=1920&auto=format&fit=crop"
+                alt="Background" class="w-full h-[160%] object-cover object-top -mt-[15%] brightness-[0.6]">
         </div>
 
         <div class="relative z-10 w-full px-4 text-white">
-            <h2 class="text-5xl md:text-6xl font-arca-bold mb-24 tracking-widest text-shadow cursor-default">
+            <h2 class="text-6xl md:text-8xl font-arca-bold mb-24 tracking-widest text-shadow cursor-default">
                 EXPERIENCIAS</h2>
 
             <div
-                class="flex flex-col md:flex-row justify-center gap-8 md:gap-16 font-body font-bold text-sm md:text-base tracking-wider uppercase">
+                class="flex flex-col md:flex-row justify-center gap-8 md:gap-16 font-body font-bold text-lg md:text-xl tracking-wider uppercase">
                 <div
                     class="flex flex-col group/item cursor-pointer opacity-70 hover:opacity-100 transition-all duration-300 hover:scale-110">
                     <span class="group-hover/item:text-mm-terracotta transition-colors duration-300">CAMINATAS</span>
-                    <span class="text-xs opacity-80 group-hover/item:opacity-100">PROGRAMADAS</span>
+                    <span class="text-sm md:text-base opacity-80 group-hover/item:opacity-100">PROGRAMADAS</span>
                 </div>
                 <div
                     class="flex flex-col group/item cursor-pointer opacity-70 hover:opacity-100 transition-all duration-300 hover:scale-110">
                     <span class="group-hover/item:text-mm-terracotta transition-colors duration-300">NUESTROS
                         LUGARES</span>
-                    <span class="text-xs opacity-80 group-hover/item:opacity-100">PREFERIDOS</span>
+                    <span class="text-sm md:text-base opacity-80 group-hover/item:opacity-100">PREFERIDOS</span>
                 </div>
                 <div
                     class="flex flex-col group/item cursor-pointer opacity-70 hover:opacity-100 transition-all duration-300 hover:scale-110">
                     <span class="group-hover/item:text-mm-terracotta transition-colors duration-300">TIROLESA</span>
-                    <span class="text-xs opacity-80 group-hover/item:opacity-100">AVENTURA</span>
+                    <span class="text-sm md:text-base opacity-80 group-hover/item:opacity-100">AVENTURA</span>
                 </div>
             </div>
         </div>
@@ -307,6 +304,34 @@
 
     <script>
         lucide.createIcons();
+
+        // Parallax Effect
+        function updateParallax(elementId, speed = 0.3) {
+            const element = document.getElementById(elementId);
+            if (!element) return;
+
+            const section = element.closest('section') || element.closest('header');
+            if (!section) return;
+
+            const scrollY = window.scrollY;
+            const windowHeight = window.innerHeight;
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+
+            // Check if section is in view
+            if (scrollY + windowHeight > sectionTop && scrollY < sectionTop + sectionHeight) {
+                const viewCenter = scrollY + windowHeight / 2;
+                const sectionCenter = sectionTop + sectionHeight / 2;
+                const dist = viewCenter - sectionCenter;
+
+                element.style.transform = `translateY(${dist * speed}px)`;
+            }
+        }
+
+        window.addEventListener('scroll', function () {
+            updateParallax('parallax-header-img', 0.3);
+            updateParallax('parallax-experiences-img', 0.2);
+        });
     </script>
 </body>
 
