@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" class="bg-mm-footer">
+<html lang="es" class="bg-mm-footer scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -120,17 +120,12 @@
             </div>
         </div>
 
-        <div class="absolute -bottom-12 z-20 left-1/2 transform -translate-x-1/2">
-            <div
-                class="w-24 h-24 bg-mm-cream rounded-full flex items-center justify-center p-4 shadow-lg animate-float transition-transform duration-300 hover:scale-110 cursor-pointer">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#393939" stroke-width="1.5" stroke-linecap="round"
-                    stroke-linejoin="round" class="w-16 h-16">
-                    <path d="M12 22v-8m-4 8v-5m8 5v-3"></path>
-                    <path d="M12 14c-4 0-7.3-2.5-8-6a9 9 0 0 1 16 0c-.7 3.5-4 6-8 6Z"></path>
-                    <path d="M12 14v-3"></path>
-                    <path d="M12 2L9 8h6l-3-6Z"></path>
-                </svg>
-            </div>
+        <div class="absolute bottom-6 z-20 left-1/2 transform -translate-x-1/2">
+            <a href="#ubicacion"
+                class="block w-36 h-24 bg-white/2 backdrop-blur-[2px] rounded-t-full flex items-end justify-center shadow-lg animate-float transition-transform duration-300 hover:scale-110 cursor-pointer overflow-hidden">
+                <img src="./images/background-footer.png" alt="Ir a Ubicación"
+                    class="w-full h-full object-cover grayscale brightness-0 invert">
+            </a>
         </div>
     </header>
 
@@ -147,7 +142,7 @@
     </section>
 
     <!-- ===== 3. ICONOS ===== -->
-    <section class="grid grid-cols-1 md:grid-cols-3 h-auto md:h-64 relative z-0">
+    <section id="ubicacion" class="grid grid-cols-1 md:grid-cols-3 h-auto md:h-64 relative z-0">
         <!-- Ubicación -->
         <div
             class="group bg-mm-sage h-64 md:h-full flex flex-col items-center justify-center text-white p-8 cursor-pointer transition-all duration-500 hover:bg-[#5a6150] overflow-hidden relative">
@@ -187,13 +182,10 @@
     <section class="relative w-full bg-mm-brown h-[320px] flex items-end overflow-visible z-10 group">
 
         <!-- Decoración -->
-        <div
-            class="absolute bottom-[-20px] left-[-20px] opacity-30 pointer-events-none transition-opacity duration-500 group-hover:opacity-50">
-            <svg class="w-72 h-72 text-white stroke-[0.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-linecap="round" stroke-linejoin="round">
-                <path d="M3 21h18L12 3 3 21z"></path>
-                <path d="M12 3v18"></path>
-            </svg>
+        <!-- Carpa Decoration -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none z-0">
+            <img src="./images/carpa.png" alt="Carpa Decoration"
+                class="absolute top-1/2 left-[-50px] transform -translate-y-1/2 h-[180%] w-auto max-w-none object-contain opacity-90">
         </div>
 
         <!-- Contenedor de Texto (Centrado) -->
