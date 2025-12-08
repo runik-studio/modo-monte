@@ -26,7 +26,7 @@
                     fontFamily: {
                         'arca-bold': ['Arca Majora 3 Bold', 'sans-serif'],
                         'arca-heavy': ['Arca Majora 3 Heavy', 'sans-serif'],
-                        'body': ['Inter', 'sans-serif'],
+                        'body': ['Arca Majora 3 Bold', 'sans-serif'],
                     },
                     backgroundImage: {
                         'leaf-pattern': "url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%23393939\" fill-opacity=\"0.05\"%3E%3Cpath d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')",
@@ -67,7 +67,7 @@
         }
 
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Arca Majora 3 Bold', sans-serif;
         }
 
         h1,
@@ -100,26 +100,23 @@
         <div class="absolute inset-0 z-0 overflow-hidden">
             <img id="parallax-header-img"
                 src="https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?q=80&w=1920&auto=format&fit=crop"
-                alt="Hero" class="w-full h-[140%] object-cover object-center -mt-[20%] brightness-[0.7]">
+                alt="Hero"
+                class="absolute top-[-25%] left-0 w-full h-[130%] object-cover object-center brightness-[0.7]">
         </div>
 
         <div class="relative z-10 mt-[-50px] px-4 animate-fade-in-up">
             <div class="mb-6 transition-transform duration-700 hover:scale-105 cursor-default">
                 <img src="./images/LOGOTIPO.png" alt="MODO MONTE" class="w-full md:w-3/4 h-auto object-contain mx-auto">
             </div>
-            <p class="text-base md:text-lg font-light font-body lowercase tracking-wide mb-6 opacity-90">
+            <p class="text-base md:text-lg font-bold font-body lowercase tracking-wide mb-6 opacity-90">
                 más que un alojamiento... una experiencia
-            </p>
-
-            <div
-                class="flex flex-col items-center gap-1 mt-4 text-xs md:text-sm tracking-[0.3em] font-arca-bold opacity-90">
-                <span>GLAMPING</span>
-                <span>ALPA CORRAL</span>
-                <span>CÓRDOBA</span>
+            <div class="mt-10 overflow-hidden">
+                <img src="./images/subtitle.png" alt="Glamping Alpa Corral Córdoba"
+                    class="w-48 h-auto object-contain transform scale-150 mx-auto opacity-90">
             </div>
         </div>
 
-        <div class="absolute bottom-6 z-20 left-1/2 transform -translate-x-1/2">
+        <div class="absolute bottom-8 z-20 left-1/2 transform -translate-x-1/2">
             <a href="#ubicacion"
                 class="block w-36 h-24 bg-white/2 backdrop-blur-[2px] rounded-t-full flex items-end justify-center shadow-lg animate-float transition-transform duration-300 hover:scale-110 cursor-pointer overflow-hidden">
                 <img src="./images/background-footer.png" alt="Ir a Ubicación"
@@ -130,8 +127,8 @@
 
     <!-- ===== 2. INTRODUCCIÓN ===== -->
     <section class="bg-mm-cream pt-20 pb-16 px-6 text-center">
-        <div class="max-w-4xl mx-auto hover:text-mm-brown transition-colors duration-500">
-            <p class="text-lg md:text-xl text-mm-brown/90 font-body font-medium leading-relaxed">
+        <div class="max-w-6xl mx-auto hover:text-mm-brown transition-colors duration-500">
+            <p class="text-xl md:text-2xl text-mm-brown/90 font-body font-bold leading-relaxed">
                 Te invitamos a disfrutar de un alojamiento que combina la comodidad <br class="hidden md:block">
                 de un hotel inmersos en el medio serrano. <br>
                 Nuestros domos están equipados con todas las comodidades modernas, <br class="hidden md:block">
