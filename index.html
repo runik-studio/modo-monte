@@ -24,9 +24,9 @@
                         'mm-footer': '#EAE0D5',
                     },
                     fontFamily: {
-                        'arca-bold': ['Arca Majora 3 Bold', 'sans-serif'],
-                        'arca-heavy': ['Arca Majora 3 Heavy', 'sans-serif'],
-                        'body': ['Arca Majora 3 Bold', 'sans-serif'],
+                        'arca-bold': ['League Spartan', 'sans-serif'],
+                        'arca-heavy': ['League Spartan', 'sans-serif'],
+                        'body': ['League Spartan', 'sans-serif'],
                     },
                     backgroundImage: {
                         'leaf-pattern': "url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%23393939\" fill-opacity=\"0.05\"%3E%3Cpath d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')",
@@ -48,33 +48,31 @@
     <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <style>
-        @font-face {
-            font-family: 'Arca Majora 3 Bold';
-            src: url('ArcaMajora3-Bold.otf') format('opentype');
-            font-weight: bold;
-        }
-
-        @font-face {
-            font-family: 'Arca Majora 3 Heavy';
-            src: url('ArcaMajora3-Heavy.otf') format('opentype');
-            font-weight: 900;
-        }
-
         body {
-            font-family: 'Arca Majora 3 Bold', sans-serif;
+            font-family: 'League Spartan', sans-serif;
         }
 
         h1,
         h2,
         h3 {
-            font-family: 'Arca Majora 3 Bold', sans-serif;
+            font-family: 'League Spartan', sans-serif;
             text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .font-arca-bold {
+            font-weight: 700;
+        }
+
+        .font-arca-heavy {
+            font-weight: 900;
         }
 
         /* Efecto Sticker Mejorado - Color Terracota y más ancho */
@@ -127,11 +125,11 @@
 
     <!-- ===== 2. INTRODUCCIÓN ===== -->
     <section class="bg-mm-cream pt-20 pb-16 px-6 text-center">
-        <div class="max-w-6xl mx-auto hover:text-mm-brown transition-colors duration-500">
-            <p class="text-xl md:text-2xl text-mm-brown/90 font-body font-bold leading-relaxed">
-                Te invitamos a disfrutar de un alojamiento que combina la comodidad <br class="hidden md:block">
-                de un hotel inmersos en el medio serrano. <br>
-                Nuestros domos están equipados con todas las comodidades modernas, <br class="hidden md:block">
+        <div class="max-w-7xl mx-auto hover:text-mm-brown transition-colors duration-500">
+            <p class="text-2xl md:text-3xl text-mm-brown/90 font-body font-bold leading-relaxed">
+                Te invitamos a disfrutar de un alojamiento que combina la comodidad
+                de un hotel inmersos en el medio serrano.
+                Nuestros domos están equipados con todas las comodidades modernas,
                 proporcionando un espacio óptimo para relajarse y descansar.
             </p>
         </div>
@@ -175,40 +173,42 @@
 
     <!-- ===== 4. ALOJAMIENTO (Ajustada altura y borde imagen) ===== -->
     <!-- h-[320px] reduce la altura para que la imagen resalte más por arriba -->
-    <section class="relative w-full bg-mm-brown h-[320px] flex items-end overflow-visible z-10 group">
+    <a href="alojamientos.html" class="block group w-full">
+        <section class="relative w-full bg-mm-brown h-[320px] flex items-end overflow-visible z-10 cursor-pointer">
 
-        <!-- Decoración -->
-        <!-- Carpa Decoration -->
-        <div class="absolute inset-0 overflow-hidden pointer-events-none z-0">
-            <img src="./images/carpa.png" alt="Carpa Decoration"
-                class="absolute top-1/2 left-[-50px] transform -translate-y-1/2 h-[180%] w-auto max-w-none object-contain opacity-90">
-        </div>
-
-        <!-- Contenedor de Texto (Centrado) -->
-        <div class="container mx-auto px-4 relative h-full flex items-center z-20">
-            <div class="w-full md:w-1/2 flex justify-center md:justify-start md:pl-20">
-                <h2
-                    class="text-3xl md:text-6xl text-mm-cream font-arca-bold tracking-widest text-center md:text-left transition-all duration-500 group-hover:tracking-[0.15em] group-hover:text-white">
-                    ALOJAMIENTO
-                </h2>
+            <!-- Decoración -->
+            <!-- Carpa Decoration -->
+            <div class="absolute inset-0 overflow-hidden pointer-events-none z-0">
+                <img src="./images/carpa.png" alt="Carpa Decoration"
+                    class="absolute top-1/2 left-[-50px] transform -translate-y-1/2 h-[180%] w-auto max-w-none object-contain opacity-90">
             </div>
-        </div>
 
-        <!-- 
-           Imagen: 
-           h-[125%] para que sobresalga más por la parte superior dado que el contenedor es más bajo.
-        -->
-        <div
-            class="absolute right-0 bottom-0 h-full w-1/2 hidden md:flex items-end justify-end pointer-events-none md:pointer-events-auto z-10">
-            <img src="./images/domo.png" alt="Domo" class="
-                    relative
-                    h-[115%] w-auto max-w-none
-                    object-cover 
-                    right-0
-                    pointer-events-none
-                ">
-        </div>
-    </section>
+            <!-- Contenedor de Texto (Centrado) -->
+            <div class="container mx-auto px-4 relative h-full flex items-center z-20">
+                <div class="w-full md:w-1/2 flex justify-center md:justify-start md:pl-20">
+                    <h2
+                        class="text-4xl md:text-7xl text-mm-beige font-arca-bold tracking-widest text-center md:text-left transition-all duration-500 group-hover:tracking-[0.15em] group-hover:text-white">
+                        ALOJAMIENTO
+                    </h2>
+                </div>
+            </div>
+
+            <!-- 
+               Imagen: 
+               h-[125%] para que sobresalga más por la parte superior dado que el contenedor es más bajo.
+            -->
+            <div
+                class="absolute right-0 bottom-0 h-full w-1/2 hidden md:flex items-end justify-end pointer-events-none md:pointer-events-auto z-10">
+                <img src="./images/domo.png" alt="Domo" class="
+                        relative
+                        h-[115%] w-auto max-w-none
+                        object-cover 
+                        right-0
+                        pointer-events-none
+                    ">
+            </div>
+        </section>
+    </a>
 
     <!-- ===== 5. EXPERIENCIAS ===== -->
     <section class="relative h-[500px] flex flex-col items-center justify-center text-center z-0 group">

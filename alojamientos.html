@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es" class="bg-mm-cream">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alojamientos - Modo Monte</title>
+
+    <!-- Carga de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Configuración de Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'mm-terracotta': '#BD917E',
+                        'mm-cream': '#F3Ece6',
+                        'mm-beige': '#E6Dace',
+                        'mm-sage': '#6D7561',
+                        'mm-brown': '#8C5A3B',
+                        'mm-dark': '#393939',
+                        'mm-footer': '#EAE0D5',
+                    },
+                    fontFamily: {
+                        'arca-bold': ['League Spartan', 'sans-serif'],
+                        'arca-heavy': ['League Spartan', 'sans-serif'],
+                        'body': ['League Spartan', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            font-family: 'League Spartan', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'League Spartan', sans-serif;
+            text-transform: uppercase;
+        }
+
+        .font-arca-bold {
+            font-weight: 700;
+        }
+
+        .font-arca-heavy {
+            font-weight: 900;
+        }
+    </style>
+</head>
+
+<body
+    class="antialiased min-h-screen md:h-screen w-full overflow-x-hidden overflow-y-auto md:overflow-hidden flex flex-col md:flex-row">
+
+    <!-- COLUMNA 1: FLORA -->
+    <div
+        class="w-full md:flex-1 h-[50vh] md:h-full flex flex-col bg-mm-cream border-b md:border-b-0 md:border-r border-white/50 transition-all duration-500 ease-in-out md:hover:flex-[1.5] group">
+        <!-- Título (Mitad superior) -->
+        <div class="h-1/2 w-full flex items-center justify-center">
+            <h2 class="text-4xl md:text-6xl text-mm-brown tracking-widest font-semibold">FLORA</h2>
+        </div>
+        <!-- Imagen (Mitad inferior) -->
+        <div class="h-1/2 w-full relative overflow-hidden group cursor-pointer">
+            <img src="./images/domo.png" alt="Flora" class="w-full h-full object-cover">
+        </div>
+    </div>
+
+    <!-- COLUMNA 2: ALBA -->
+    <div
+        class="w-full md:flex-1 h-[50vh] md:h-full flex flex-col bg-white border-b md:border-b-0 md:border-r border-mm-cream/50 transition-all duration-500 ease-in-out md:hover:flex-[1.5] group">
+        <!-- Título -->
+        <div class="h-1/2 w-full flex items-center justify-center">
+            <h2 class="text-4xl md:text-6xl text-mm-brown tracking-widest font-semibold">ALBA</h2>
+        </div>
+        <!-- Imagen -->
+        <div class="h-1/2 w-full relative overflow-hidden group cursor-pointer">
+            <img src="./images/domo.png" alt="Alba" class="w-full h-full object-cover">
+        </div>
+    </div>
+
+    <!-- COLUMNA 3: LUCIA -->
+    <div
+        class="w-full md:flex-1 h-[50vh] md:h-full flex flex-col bg-mm-cream transition-all duration-500 ease-in-out md:hover:flex-[1.5] group">
+        <!-- Título -->
+        <div class="h-1/2 w-full flex items-center justify-center">
+            <h2 class="text-4xl md:text-6xl text-mm-brown tracking-widest font-semibold">LUCIA</h2>
+        </div>
+        <!-- Imagen -->
+        <div class="h-1/2 w-full relative overflow-hidden group cursor-pointer">
+            <img src="./images/domo.png" alt="Lucia" class="w-full h-full object-cover">
+        </div>
+    </div>
+
+    <!-- COLUMNA 4: REFUGIOS CARPAS (Nueva Sección Vertical) -->
+    <div
+        class="w-full md:flex-1 h-[50vh] md:h-full bg-[#A66F5B] text-mm-cream flex flex-col items-center justify-center relative overflow-hidden transition-all duration-500 ease-in-out md:hover:flex-[1.5] group">
+        <!-- Decoración Luces (Placeholder) -->
+        <div class="absolute top-10 w-full flex justify-center opacity-50">
+            <!-- <img src="./images/garland.png" ... > -->
+        </div>
+
+        <!-- Contenido Central -->
+        <div class="flex flex-col items-center justify-center h-full pb-20">
+            <img src="./images/carpa.png" alt="Carpa"
+                class="w-64 md:w-96 h-auto mb-8 opacity-90 object-contain brightness-200">
+        </div>
+
+        <!-- Texto Inferior -->
+        <div class="absolute bottom-20 text-center">
+            <h3 class="text-2xl md:text-3xl leading-tight mb-1">REFUGIOS</h3>
+            <h3 class="text-2xl md:text-3xl leading-tight mb-2">CARPAS</h3>
+            <p class="text-sm tracking-widest opacity-80">MUY PRONTO</p>
+        </div>
+    </div>
+
+    <!-- COLUMNA 5: TARIFAS -->
+    <div
+        class="w-full md:flex-1 h-auto md:h-full bg-[#8C5A3B] text-mm-cream flex flex-col relative overflow-hidden p-6 md:p-8 transition-all duration-500 ease-in-out md:hover:flex-[1.5] group">
+
+        <!-- Tarifas (Parte Superior) -->
+        <div class="mt-10 text-right">
+            <h2 class="text-3xl md:text-4xl mb-6">TARIFAS</h2>
+            <div class="space-y-6 text-base md:text-lg font-body tracking-wide">
+                <p>GENERALES</p>
+                <p>DESCUENTOS<br>DÍAS DE SEMANA</p>
+                <p>COMBO<br>"ESCAPADA EN<br>MANADA"<br>PACK X4 X5 X6</p>
+                <p>COMBO<br>"VERANO A LA<br>VISTA"</p>
+            </div>
+        </div>
+
+        <!-- Footer Info (Parte Inferior) -->
+        <div class="mt-auto text-right">
+            <p class="text-xs md:text-sm font-body mb-4 opacity-90">
+                CONSULTA PRECIOS<br>Y DISPONIBILIDAD.
+            </p>
+            <div class="flex flex-col items-end gap-2 text-xs md:text-sm font-body">
+                <div class="flex items-center gap-2">
+                    <i data-lucide="phone" class="w-4 h-4"></i>
+                    <span>+549 351 3265647</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i data-lucide="instagram" class="w-4 h-4"></i>
+                    <span>modo.monte.alpa</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
