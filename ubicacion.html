@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es" class="bg-mm-cream">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubicación - Modo Monte</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'mm-terracotta': '#BD917E',
+                        'mm-cream': '#F3Ece6',
+                        'mm-beige': '#E6Dace',
+                        'mm-sage': '#6D7561',
+                        'mm-brown': '#8C5A3B',
+                        'mm-dark': '#393939',
+                        'mm-footer': '#EAE0D5',
+                    },
+                    fontFamily: {
+                        'arca-bold': ['League Spartan', 'sans-serif'],
+                        'arca-heavy': ['League Spartan', 'sans-serif'],
+                        'body': ['League Spartan', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'League Spartan', sans-serif; }
+    </style>
+</head>
+<body class="antialiased min-h-screen w-full overflow-x-hidden flex flex-col md:flex-row">
+
+    <a href="index.html" class="absolute top-4 left-4 md:top-8 md:left-8 z-50 bg-black/30 hover:bg-black/50 text-white rounded-full p-3 backdrop-blur-md transition-all duration-300 shadow-lg flex items-center justify-center">
+        <i data-lucide="arrow-left" class="w-6 h-6"></i>
+    </a>
+
+    <div class="w-full md:w-1/2 lg:w-[50%] h-auto md:h-screen bg-mm-cream flex flex-col items-center justify-center p-8 md:p-12 lg:p-16 overflow-y-auto transition-opacity duration-300" id="textContent">
+        
+    </div>
+
+    <div class="w-full md:w-1/2 lg:w-[50%] h-[50vh] md:h-screen relative bg-mm-brown group/carousel overflow-hidden flex flex-col">
+        <img id="carouselImage" src="" alt="Ubicación Modo Monte" class="w-full h-full object-cover transition-opacity duration-300">
+
+        <button id="accesosBtn" onclick="nextSlide()" class="absolute bottom-8 right-8 text-white font-arca-bold text-3xl md:text-5xl tracking-widest drop-shadow-lg flex items-center gap-2 hover:scale-105 transition-transform z-20 hidden">
+            ACCESOS <i data-lucide="chevrons-right" class="w-8 h-8 md:w-12 md:h-12"></i>
+        </button>
+
+        <div id="mapControls" class="absolute bottom-8 right-8 hidden z-20 flex gap-4">
+            <button onclick="prevSlide()" class="bg-white/30 hover:bg-white/50 backdrop-blur-md text-white rounded-full p-3 transition-colors">
+                <i data-lucide="chevron-left" class="w-6 h-6"></i>
+            </button>
+            <button onclick="nextSlide()" class="bg-white/30 hover:bg-white/50 backdrop-blur-md text-white rounded-full p-3 transition-colors">
+                <i data-lucide="chevron-right" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        const slides = [
+            {
+                image: './images/Ubicacion/20251214_094300.jpg',
+                isMap: false,
+                html: `
+                    <div class="max-w-xl w-full text-mm-brown text-center space-y-6">
+                        <p class="font-semibold text-lg md:text-xl leading-relaxed">
+                            Ubicado en ALPA CORRAL<br>
+                            un tesoro de las<br>
+                            SIERRAS DEL SUR DE CÓRDOBA<br>
+                            que pocos conocen.
+                        </p>
+                        <p class="font-semibold text-base md:text-lg leading-relaxed">
+                            Esta localidad es distinguida por su hermoso entorno<br>
+                            natural con sus ríos transparentes, cascadas y<br>
+                            bosques que la convierten en un destino ideal<br>
+                            para los amantes de la naturaleza y<br>
+                            las actividades al aire libre.
+                        </p>
+                        <p class="font-semibold text-base md:text-lg leading-relaxed">
+                            El pueblo conserva un ambiente tranquilo,<br>
+                            perfecto para desconectar y relajarse,<br>
+                            con opciones de actividades de ecoturismo<br>
+                            como senderismos, tirolesa y escalada,<br>
+                            y una amplia variedad de ofertas<br>
+                            gastronómicas locales que reflejan la<br>
+                            hospitalidad de la comunidad.
+                        </p>
+                        <p class="font-semibold text-base md:text-lg leading-relaxed">
+                            MODO MONTE se encuentra en un pequeño<br>
+                            monte serrano a 2,5km del centro del<br>
+                            poblado y a 800m del río Las Barrancas.
+                        </p>
+                    </div>
+                `
+            },
+            {
+                image: './images/ICONOS ACCESOS-18.png',
+                isMap: true,
+                html: `
+                    <div class="max-w-xl w-full text-mm-brown space-y-8">
+                        <h1 class="text-5xl md:text-7xl font-arca-bold tracking-widest uppercase leading-none mb-6">
+                            DESDE<br>CORDOBA
+                        </h1>
+                        <p class="font-semibold text-lg md:text-xl leading-relaxed">
+                            Por Ruta Nacional 36 (Autovía)<br>hasta la localidad de Elena;<br>
+                            desde allí tomar la Ruta Provincial S-252, hasta<br>Río de los Sauces, allí tomar la ruta 23 hasta la<br>localidad de Alpa Corral.
+                        </p>
+                        <p class="font-semibold text-lg md:text-xl leading-relaxed mt-8">
+                            Todo el trayecto está asfaltado.
+                        </p>
+                    </div>
+                `
+            },
+            {
+                image: './images/ICONOS ACCESOS-19.png',
+                isMap: true,
+                html: `
+                    <div class="max-w-xl w-full text-mm-brown space-y-8">
+                        <h1 class="text-5xl md:text-7xl font-arca-bold tracking-widest uppercase leading-none mb-6 text-mm-brown">
+                            DESDE<br>SAN LUIS<br>MENDOZA<br>SAN JUAN
+                        </h1>
+                        <p class="font-semibold text-lg md:text-xl leading-relaxed">
+                            Tomar la Ruta provincial 20 hasta su intersección con<br>la Ruta Nacional 148 (600m),<br>
+                            luego tomar la Ruta provincial 10; hasta la punilla,<br>allí tomar la Ruta Provincial 30 hasta el cruce con la<br>ruta 23; desde allí seguir por Ruta Provincial 23<br>hasta la Localidad de Alpa Corral.
+                        </p>
+                    </div>
+                `
+            },
+            {
+                image: './images/ICONOS ACCESOS-20.png',
+                isMap: true,
+                html: `
+                    <div class="max-w-xl w-full text-mm-brown">
+                        <h2 class="text-3xl md:text-5xl font-arca-bold tracking-widest uppercase text-mm-brown mb-2">
+                            DESDE<br>BUENOS AIRES
+                        </h2>
+                        <p class="font-semibold text-base md:text-lg leading-tight mb-6">
+                            Por Ruta Nacional 9, hasta la altura de Pilar;<br>
+                            tomar Ruta Nacional 8 hasta la Ciudad Río Cuarto.
+                        </p>
+
+                        <h2 class="text-3xl md:text-5xl font-arca-bold tracking-widest uppercase text-mm-brown mb-2">
+                            ROSARIO
+                        </h2>
+                        <p class="font-semibold text-base md:text-lg leading-tight mb-6">
+                            Partiendo por Autopista 9, hasta Villa María<br>
+                            tomar la Ruta Nacional 158, hasta la Ciudad Río Cuarto.
+                        </p>
+
+                        <h2 class="text-3xl md:text-5xl font-arca-bold tracking-widest uppercase text-mm-brown mb-2">
+                            LA PAMPA
+                        </h2>
+                        <p class="font-semibold text-base md:text-lg leading-tight mb-6">
+                            Partiendo por Ruta Nacional 35 hasta la ciudad de<br>Río Cuarto.
+                        </p>
+
+                        <h3 class="text-xl md:text-2xl font-arca-bold tracking-widest uppercase text-mm-brown mb-2">
+                            DESDE RÍO CUARTO
+                        </h3>
+                        <p class="font-semibold text-base md:text-lg leading-tight">
+                            Tomar la ruta provincial 30<br>hasta el cruce con la ruta 23;<br>
+                            seguir por Ruta Provincial 23 hasta Alpa Corral.
+                        </p>
+                    </div>
+                `
+            }
+        ];
+
+        let currentSlide = 0;
+
+        function updateSlide() {
+            const slide = slides[currentSlide];
+            const textContent = document.getElementById('textContent');
+            textContent.style.opacity = '0';
+            const img = document.getElementById('carouselImage');
+            const changingImage = img.src !== new URL(slide.image, document.baseURI).href;
+            if (changingImage) {
+                img.style.opacity = '0';
+            }
+
+            setTimeout(() => {
+                textContent.innerHTML = slide.html;
+                textContent.style.opacity = '1';
+                
+                if (changingImage) {
+                    img.src = slide.image;
+                    img.className = slide.isMap ? 
+                        "w-full h-full object-contain md:object-cover transition-opacity duration-300" : 
+                        "w-full h-full object-cover transition-opacity duration-300";
+                    img.style.opacity = '1';
+                }
+                document.getElementById('accesosBtn').classList.toggle('hidden', slide.isMap);
+                document.getElementById('mapControls').classList.toggle('hidden', !slide.isMap);
+                
+                lucide.createIcons();
+            }, 150);
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            updateSlide();
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            updateSlide();
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            updateSlide();
+            lucide.createIcons();
+        });
+    </script>
+</body>
+</html>

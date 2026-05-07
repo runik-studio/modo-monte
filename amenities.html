@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es" class="bg-mm-cream">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amenities - Modo Monte</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'mm-terracotta': '#BD917E',
+                        'mm-cream': '#F3Ece6',
+                        'mm-beige': '#E6Dace',
+                        'mm-sage': '#6D7561',
+                        'mm-brown': '#8C5A3B',
+                        'mm-dark': '#393939',
+                        'mm-footer': '#EAE0D5',
+                    },
+                    fontFamily: {
+                        'arca-bold': ['League Spartan', 'sans-serif'],
+                        'arca-heavy': ['League Spartan', 'sans-serif'],
+                        'body': ['League Spartan', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'League Spartan', sans-serif; }
+    </style>
+</head>
+<body class="antialiased min-h-screen w-full overflow-x-hidden flex flex-col md:flex-row">
+
+    <a href="index.html" class="absolute top-4 left-4 md:top-8 md:left-8 z-50 bg-black/30 hover:bg-black/50 text-white rounded-full p-3 backdrop-blur-md transition-all duration-300 shadow-lg flex items-center justify-center">
+        <i data-lucide="arrow-left" class="w-6 h-6"></i>
+    </a>
+
+    <div class="w-full md:w-1/2 lg:w-[55%] h-[50vh] md:h-screen relative bg-black group/carousel overflow-hidden">
+        <img id="carouselImage" src="" alt="Amenities Modo Monte" class="w-full h-full object-cover transition-opacity duration-300">
+
+        <button onclick="prevImage()" class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/50 backdrop-blur-md text-white rounded-full p-2 md:opacity-0 md:group-hover/carousel:opacity-100 transition-opacity z-20">
+            <i data-lucide="chevron-left" class="w-6 h-6"></i>
+        </button>
+        <button onclick="nextImage()" class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/50 backdrop-blur-md text-white rounded-full p-2 md:opacity-0 md:group-hover/carousel:opacity-100 transition-opacity z-20">
+            <i data-lucide="chevron-right" class="w-6 h-6"></i>
+        </button>
+
+        <div id="carouselDots" class="absolute bottom-6 left-0 right-0 flex justify-center gap-2 flex-wrap px-4 z-20">
+        </div>
+    </div>
+
+    <div class="w-full md:w-1/2 lg:w-[45%] h-auto md:h-screen bg-mm-cream flex flex-col items-start justify-center p-8 md:p-12 lg:p-16 overflow-y-auto">
+        <div class="max-w-xl w-full text-mm-brown">
+
+            <div class="text-sm md:text-base font-body leading-relaxed mb-8 opacity-90 space-y-2">
+                <p>En Modo Monte te invitamos a vivir la experiencia de lo silvestre con el confort de un hotel.</p>
+                <p>Valoramos y respetamos el medio que nos acoge.</p>
+                <p>Nos esforzamos por ofrecer una experiencia sostenible, minimizando nuestro impacto ambiental y promoviendo prácticas responsables.</p>
+            </div>
+
+            <h1 class="text-4xl md:text-5xl font-arca-bold tracking-widest mb-8 uppercase drop-shadow-sm leading-tight text-mm-brown">
+                AMENITIES<br>Y SERVICIOS
+            </h1>
+
+            <ul class="list-none space-y-4 text-sm md:text-base font-semibold mb-12">
+                <li class="flex items-start gap-4">
+                    <i data-lucide="wifi" class="w-5 h-5 text-mm-terracotta mt-0.5 shrink-0"></i> 
+                    <div>WIFI</div>
+                </li>
+                <li class="flex items-start gap-4">
+                    <div class="relative shrink-0 mt-0.5">
+                        <i data-lucide="car-front" class="w-5 h-5 text-mm-terracotta"></i>
+                        <span class="absolute -top-1 -right-1 bg-mm-brown text-white text-[8px] font-bold px-1 rounded-full">E</span>
+                    </div>
+                    <div>Estacionamiento techado</div>
+                </li>
+                <li class="flex items-start gap-4">
+                    <i data-lucide="waves" class="w-5 h-5 text-mm-terracotta mt-0.5 shrink-0"></i> 
+                    <div>Piscina<br><span class="text-[10px] md:text-xs leading-tight font-normal opacity-80">con hermosas vistas</span></div>
+                </li>
+                <li class="flex items-start gap-4">
+                    <i data-lucide="flame" class="w-5 h-5 text-mm-terracotta mt-0.5 shrink-0"></i> 
+                    <div>Fogonero común<br><span class="text-[10px] md:text-xs leading-tight font-normal opacity-80">(con accesorios de fuego, parrillas, discos, pailas)</span></div>
+                </li>
+                <li class="flex items-start gap-4">
+                    <i data-lucide="coffee" class="w-5 h-5 text-mm-terracotta mt-0.5 shrink-0"></i> 
+                    <div>Desayunos<br><span class="text-[10px] md:text-xs leading-tight font-normal opacity-80">(riquísimos)</span></div>
+                </li>
+                <li class="flex items-start gap-4">
+                    <i data-lucide="tent" class="w-5 h-5 text-mm-terracotta mt-0.5 shrink-0"></i> 
+                    <div>Equipamiento exteriores<br><span class="text-[10px] md:text-xs leading-tight font-normal opacity-80">(hamacas paraguayas, sillas, mesas, reposeras)</span></div>
+                </li>
+                <li class="flex items-start gap-4">
+                    <i data-lucide="map" class="w-5 h-5 text-mm-terracotta mt-0.5 shrink-0"></i> 
+                    <div>Sugerencias y guiadas a los lugares<br>que más nos gustan de Alpa</div>
+                </li>
+            </ul>
+
+            <div class="flex flex-col gap-2 text-xs md:text-sm font-body mt-auto">
+                <div class="flex items-center gap-3">
+                    <i data-lucide="phone" class="w-4 h-4 text-mm-terracotta"></i>
+                    <span>+549 351 3265647</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <i data-lucide="instagram" class="w-4 h-4 text-mm-terracotta"></i>
+                    <span>modo.monte.alpa</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        const images = [
+            './images/Amenities/01.jpg',
+            './images/Amenities/02.jpg',
+            './images/Amenities/03.jpg',
+            './images/Amenities/04.jpg',
+            './images/Amenities/05.jpg',
+            './images/Amenities/06.jpg',
+            './images/Amenities/07.jpg',
+            './images/Amenities/10.jpg',
+            './images/Amenities/11.jpg',
+            './images/Amenities/12.jpg',
+            './images/Amenities/13.jpg',
+            './images/Amenities/14.jpg',
+            './images/Amenities/15.jpg',
+            './images/Amenities/16.jpg',
+            './images/Amenities/17.jpg',
+            './images/Amenities/18.jpg',
+            './images/Amenities/19.jpeg',
+            './images/Amenities/20.jpg',
+            './images/Amenities/21.jpg',
+            './images/Amenities/23.jpg',
+            './images/Amenities/24.jpeg',
+            './images/Amenities/25.jpg'
+        ];
+
+        let currentImageIndex = 0;
+
+        function initCarousel() {
+            renderDots();
+            updateCarouselImage();
+            setInterval(nextImage, 4000);
+        }
+
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            updateCarouselImage();
+            updateDots();
+        }
+
+        function prevImage() {
+            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+            updateCarouselImage();
+            updateDots();
+        }
+
+        function updateCarouselImage() {
+            const img = document.getElementById('carouselImage');
+            img.style.opacity = '0.4';
+            setTimeout(() => {
+                img.src = images[currentImageIndex];
+                img.style.opacity = '1';
+            }, 150);
+        }
+
+        function renderDots() {
+            const dotsContainer = document.getElementById('carouselDots');
+            dotsContainer.innerHTML = '';
+
+            images.forEach((_, idx) => {
+                const dot = document.createElement('button');
+                dot.className = `w-2 h-2 md:w-2.5 md:h-2.5 rounded-full transition-all duration-300 ${idx === currentImageIndex ? 'bg-white scale-125' : 'bg-white/50 hover:bg-white/80'}`;
+                dot.onclick = () => {
+                    currentImageIndex = idx;
+                    updateCarouselImage();
+                    updateDots();
+                };
+                dotsContainer.appendChild(dot);
+            });
+        }
+
+        function updateDots() {
+            const dotsContainer = document.getElementById('carouselDots');
+            Array.from(dotsContainer.children).forEach((dot, idx) => {
+                if (idx === currentImageIndex) {
+                    dot.className = 'w-2 h-2 md:w-2.5 md:h-2.5 rounded-full transition-all duration-300 bg-white scale-125';
+                } else {
+                    dot.className = 'w-2 h-2 md:w-2.5 md:h-2.5 rounded-full transition-all duration-300 bg-white/50 hover:bg-white/80';
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initCarousel();
+            lucide.createIcons();
+        });
+    </script>
+</body>
+</html>

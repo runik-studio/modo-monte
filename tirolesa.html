@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es" class="bg-mm-brown">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tirolesa - Modo Monte</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'mm-terracotta': '#BD917E',
+                        'mm-cream': '#F3Ece6',
+                        'mm-beige': '#E6Dace',
+                        'mm-sage': '#6D7561',
+                        'mm-brown': '#8C5A3B',
+                        'mm-dark': '#393939',
+                        'mm-footer': '#EAE0D5',
+                    },
+                    fontFamily: {
+                        'arca-bold': ['League Spartan', 'sans-serif'],
+                        'arca-heavy': ['League Spartan', 'sans-serif'],
+                        'body': ['League Spartan', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'League Spartan', sans-serif; }
+    </style>
+</head>
+<body class="antialiased min-h-screen w-full overflow-x-hidden flex flex-col md:flex-row">
+
+    <a href="index.html" class="absolute top-4 left-4 md:top-8 md:left-8 z-50 bg-black/30 hover:bg-black/50 text-white rounded-full p-3 backdrop-blur-md transition-all duration-300 shadow-lg flex items-center justify-center">
+        <i data-lucide="arrow-left" class="w-6 h-6"></i>
+    </a>
+
+    <div class="w-full md:w-1/2 lg:w-[55%] h-[50vh] md:h-screen relative bg-black group/carousel overflow-hidden">
+        <img id="carouselImage" src="" alt="Tirolesa Modo Monte" class="w-full h-full object-cover transition-opacity duration-300">
+
+        <button onclick="prevImage()" class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/50 backdrop-blur-md text-white rounded-full p-2 md:opacity-0 md:group-hover/carousel:opacity-100 transition-opacity z-20">
+            <i data-lucide="chevron-left" class="w-6 h-6"></i>
+        </button>
+        <button onclick="nextImage()" class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/50 backdrop-blur-md text-white rounded-full p-2 md:opacity-0 md:group-hover/carousel:opacity-100 transition-opacity z-20">
+            <i data-lucide="chevron-right" class="w-6 h-6"></i>
+        </button>
+
+        <div id="carouselDots" class="absolute bottom-6 left-0 right-0 flex justify-center gap-2 flex-wrap px-4 z-20">
+        </div>
+    </div>
+
+    <div class="w-full md:w-1/2 lg:w-[45%] h-auto md:h-screen bg-[#A66F5B] md:bg-mm-brown flex flex-col items-start justify-center p-8 md:p-12 lg:p-16 overflow-y-auto">
+        <div class="max-w-xl w-full text-white">
+
+            <h1 class="text-5xl md:text-6xl font-arca-bold tracking-widest mb-10 uppercase drop-shadow-sm leading-tight text-white">
+                TIROLESA
+            </h1>
+
+            <div class="text-base md:text-lg font-body font-semibold leading-relaxed mb-8 opacity-95 space-y-6">
+                <p>
+                    Aventura en aire a más de 35m de altura<br>
+                    sobre el Río Las Barrancas.<br>
+                    Ubicados a 50m de la Unión de los Ríos.
+                </p>
+                <p>
+                    El recorrido contempla 2 tramos.<br>
+                    El de ida de 240m y el retorno de 150m.
+                </p>
+                <p>
+                    Temporada alta abierto todos los días<br>
+                    a partir de las 16hs.
+                </p>
+                <p>
+                    Si venís con un grupo o contingente llamanos para<br>
+                    coordinar día y hora.
+                </p>
+            </div>
+
+            <div class="flex flex-col gap-3 text-sm md:text-base font-body font-semibold mt-auto pt-8">
+                <div class="flex items-center gap-3">
+                    <i data-lucide="message-circle" class="w-5 h-5 opacity-90"></i>
+                    <span>+549 358 5617390</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <i data-lucide="instagram" class="w-5 h-5 opacity-90"></i>
+                    <span>modo.monte.alpa</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        const images = [
+            './images/Tirolesa/01.jpg',
+            './images/Tirolesa/02.jpg',
+            './images/Tirolesa/03.jpg',
+            './images/Tirolesa/04.jpg',
+            './images/Tirolesa/05.jpg',
+            './images/Tirolesa/06.jpg',
+            './images/Tirolesa/07.jpg',
+            './images/Tirolesa/08.jpg',
+            './images/Tirolesa/09.jpg'
+        ];
+
+        let currentImageIndex = 0;
+
+        function initCarousel() {
+            renderDots();
+            updateCarouselImage();
+            setInterval(nextImage, 4000);
+        }
+
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            updateCarouselImage();
+            updateDots();
+        }
+
+        function prevImage() {
+            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+            updateCarouselImage();
+            updateDots();
+        }
+
+        function updateCarouselImage() {
+            const img = document.getElementById('carouselImage');
+            img.style.opacity = '0.4';
+            setTimeout(() => {
+                img.src = images[currentImageIndex];
+                img.style.opacity = '1';
+            }, 150);
+        }
+
+        function renderDots() {
+            const dotsContainer = document.getElementById('carouselDots');
+            dotsContainer.innerHTML = '';
+
+            images.forEach((_, idx) => {
+                const dot = document.createElement('button');
+                dot.className = `w-2 h-2 md:w-2.5 md:h-2.5 rounded-full transition-all duration-300 ${idx === currentImageIndex ? 'bg-white scale-125' : 'bg-white/50 hover:bg-white/80'}`;
+                dot.onclick = () => {
+                    currentImageIndex = idx;
+                    updateCarouselImage();
+                    updateDots();
+                };
+                dotsContainer.appendChild(dot);
+            });
+        }
+
+        function updateDots() {
+            const dotsContainer = document.getElementById('carouselDots');
+            Array.from(dotsContainer.children).forEach((dot, idx) => {
+                if (idx === currentImageIndex) {
+                    dot.className = 'w-2 h-2 md:w-2.5 md:h-2.5 rounded-full transition-all duration-300 bg-white scale-125';
+                } else {
+                    dot.className = 'w-2 h-2 md:w-2.5 md:h-2.5 rounded-full transition-all duration-300 bg-white/50 hover:bg-white/80';
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initCarousel();
+            lucide.createIcons();
+        });
+    </script>
+</body>
+</html>

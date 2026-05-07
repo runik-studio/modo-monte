@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es" class="bg-mm-cream">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros - Modo Monte</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'mm-terracotta': '#BD917E',
+                        'mm-cream': '#F3Ece6',
+                        'mm-beige': '#E6Dace',
+                        'mm-sage': '#6D7561',
+                        'mm-brown': '#8C5A3B',
+                        'mm-dark': '#393939',
+                        'mm-footer': '#EAE0D5',
+                    },
+                    fontFamily: {
+                        'arca-bold': ['League Spartan', 'sans-serif'],
+                        'arca-heavy': ['League Spartan', 'sans-serif'],
+                        'body': ['League Spartan', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'League Spartan', sans-serif; }
+    </style>
+</head>
+<body class="antialiased min-h-screen w-full overflow-x-hidden flex flex-col md:flex-row">
+
+    <a href="index.html" class="absolute top-4 left-4 md:top-8 md:left-8 z-50 bg-black/30 hover:bg-black/50 text-white rounded-full p-3 backdrop-blur-md transition-all duration-300 shadow-lg flex items-center justify-center">
+        <i data-lucide="arrow-left" class="w-6 h-6"></i>
+    </a>
+
+    <div class="w-full md:w-3/5 lg:w-[55%] h-[50vh] md:h-screen relative">
+        <img src="./images/nosotros.jpg" alt="Familia Modo Monte" class="w-full h-full object-cover">
+    </div>
+
+    <div class="w-full md:w-2/5 lg:w-[45%] h-auto md:h-screen bg-[#A66F5B] flex flex-col items-center justify-center p-8 md:p-12 lg:p-16 overflow-y-auto">
+        <div class="max-w-xl w-full">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-arca-bold tracking-widest mb-8 md:mb-12 uppercase text-white drop-shadow-md">
+                NOSOTROS
+            </h1>
+            
+            <div class="space-y-6 text-sm md:text-base lg:text-lg font-body leading-relaxed text-white opacity-95">
+                <p>
+                    Modo Monte es un proyecto familiar.<br>
+                    Nosotros somos Fran, Emilia, Hernán, Amara y Cruz (de izquierda a derecha) y muchos más que nos ayudan de muchas maneras a concretar este proyecto, que ya es nuestro hogar...
+                </p>
+                <p>
+                    Tuvimos la posibilidad de habitar este lugar desde el 2014 cuando todavía no había agua, ni luz, ni camino. Y esto nos permitió conocer y disfrutar de este montecito de otra manera. Apreciar la salida del sol, de la luna, los bichitos que ya no se ven en la ciudad y toda esta abundante flora y fauna que nos rodea.
+                </p>
+                <p>
+                    Con Modo Monte, intentamos compartir estas vivencias y poder ofrecer la experiencia de lo silvestre con todo el confort de un hotel, para que todos puedan disfrutar de lo que la naturaleza ofrece.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
