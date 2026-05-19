@@ -107,8 +107,7 @@
             <div id="parallax-header-container" class="absolute top-[-25%] left-0 w-full h-[130%] brightness-[0.7]">
                 <img id="header-fallback-img"
                     src="https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?q=80&w=1920&auto=format&fit=crop"
-                    alt="Hero"
-                    class="w-full h-full object-cover object-center transition-opacity duration-1000">
+                    alt="Hero" class="w-full h-full object-cover object-center transition-opacity duration-1000">
                 <video id="header-video" autoplay loop muted playsinline
                     class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-1000">
                 </video>
@@ -138,10 +137,10 @@
         </div>
     </header>
 
-    <section id="informacion" class="w-full min-h-screen flex flex-col">
-        <section class="bg-mm-cream py-10 px-6 text-center flex-shrink-0">
+    <section id="informacion" class="w-full md:h-screen flex flex-col">
+        <section class="bg-mm-cream py-6 md:py-10 px-4 md:px-6 text-center flex-shrink-0">
             <div class="max-w-4xl mx-auto hover:text-mm-brown transition-colors duration-500">
-                <p class="text-lg md:text-xl text-mm-brown/90 font-body font-bold leading-relaxed">
+                <p class="text-sm md:text-xl text-mm-brown/90 font-body font-bold leading-relaxed">
                     Te invitamos a vivir lo silvestre con el confort de un hotel.
                     Nuestros domos están equipados con todas las comodidades modernas,
                     proporcionando un espacio óptimo para relajarse y descansar.
@@ -149,68 +148,71 @@
             </div>
         </section>
 
-        <section class="grid grid-cols-1 md:grid-cols-3 h-auto flex-grow relative z-0">
+        <section class="grid grid-cols-1 md:grid-cols-3 h-auto md:flex-grow relative z-0">
 
             <a href="ubicacion.html"
-                class="group bg-mm-sage h-64 md:h-full flex flex-col items-center justify-center text-white p-8 cursor-pointer transition-all duration-500 hover:bg-[#858d78] overflow-hidden relative">
+                class="group bg-mm-sage h-[20vh] min-h-[130px] md:h-full flex flex-col items-center justify-center text-white p-4 md:p-8 cursor-pointer transition-all duration-500 hover:bg-[#858d78] overflow-hidden relative">
                 <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition-opacity duration-500">
                 </div>
                 <img src="./images/point.png" alt="Ubicación"
-                    class="w-24 h-24 object-contain mb-3 transition-transform duration-500 group-hover:scale-110 group-hover:mb-5">
+                    class="w-12 h-12 md:w-24 md:h-24 object-contain mb-1.5 md:mb-3 transition-transform duration-500 group-hover:scale-110 group-hover:mb-5">
                 <span
-                    class="text-2xl md:text-4xl font-arca-bold tracking-widest uppercase relative z-10 transition-all duration-300 group-hover:tracking-[0.2em]">UBICACIÓN</span>
+                    class="text-lg md:text-4xl font-arca-bold tracking-widest uppercase relative z-10 transition-all duration-300 group-hover:tracking-[0.2em]">UBICACIÓN</span>
             </a>
 
             <a href="nosotros.html"
-                class="group bg-mm-beige h-64 md:h-full flex flex-col items-center justify-center text-mm-brown p-8 cursor-pointer transition-all duration-500 hover:bg-[#dcd0c4] overflow-hidden relative">
+                class="group bg-mm-beige h-[20vh] min-h-[130px] md:h-full flex flex-col items-center justify-center text-mm-brown p-4 md:p-8 cursor-pointer transition-all duration-500 hover:bg-[#dcd0c4] overflow-hidden relative">
                 <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-500">
                 </div>
                 <img src="./images/manos.png" alt="Nosotros"
-                    class="w-40 h-40 object-contain mb-3 transition-transform duration-500 group-hover:scale-110 group-hover:mb-5">
+                    class="w-20 h-20 md:w-40 md:h-40 object-contain mb-1.5 md:mb-3 transition-transform duration-500 group-hover:scale-110 group-hover:mb-5">
                 <span
-                    class="text-2xl md:text-4xl font-arca-bold tracking-widest uppercase relative z-10 transition-all duration-300 group-hover:tracking-[0.2em]">NOSOTROS</span>
+                    class="text-lg md:text-4xl font-arca-bold tracking-widest uppercase relative z-10 transition-all duration-300 group-hover:tracking-[0.2em]">NOSOTROS</span>
             </a>
 
             <a href="amenities.html"
-                class="group bg-mm-terracotta h-64 md:h-full flex flex-col items-center justify-center text-white p-8 cursor-pointer transition-all duration-500 hover:bg-[#a67f6e] overflow-hidden relative">
+                class="group bg-mm-terracotta h-[20vh] min-h-[130px] md:h-full flex flex-col items-center justify-center text-white p-4 md:p-8 cursor-pointer transition-all duration-500 hover:bg-[#a67f6e] overflow-hidden relative">
                 <img src="./images/FONDOS + ICONOS PAG PRINCIPAL-02.png" alt="Background Amenities"
                     class="absolute top-0 left-0 w-full h-full object-cover opacity-50 pointer-events-none z-0">
                 <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition-opacity duration-500">
                 </div>
                 <img src="./images/taza.png" alt="Amenities"
-                    class="w-24 h-24 object-contain mb-3 transition-transform duration-500 group-hover:scale-110 group-hover:mb-5 relative z-10">
+                    class="w-12 h-12 md:w-24 md:h-24 object-contain mb-1.5 md:mb-3 transition-transform duration-500 group-hover:scale-110 group-hover:mb-5 relative z-10">
                 <span
-                    class="text-2xl md:text-4xl font-arca-bold tracking-widest uppercase relative z-10 transition-all duration-300 group-hover:tracking-[0.2em]">AMENITIES</span>
+                    class="text-lg md:text-4xl font-arca-bold tracking-widest uppercase relative z-10 transition-all duration-300 group-hover:tracking-[0.2em]">AMENITIES</span>
             </a>
         </section>
 
         <a href="alojamientos.html" class="block group w-full">
             <section
-                class="relative w-full bg-mm-brown h-[220px] md:h-[240px] flex items-end overflow-visible z-10 cursor-pointer">
+                class="relative w-full bg-mm-brown h-[23vh] min-h-[150px] md:h-[240px] flex items-end overflow-visible z-10 cursor-pointer">
 
                 <div class="absolute inset-0 overflow-hidden pointer-events-none z-0">
-                    <img src="./images/carpa.png" alt="Carpa Decoration"
-                        class="absolute top-1/2 left-[-50px] transform -translate-y-1/2 h-[180%] w-auto max-w-none object-contain opacity-90">
-                </div>
-
-                <div class="container mx-auto px-4 relative h-full flex items-center z-20">
-                    <div class="w-full md:w-1/2 flex justify-center md:justify-start md:pl-20">
-                        <h2
-                            class="text-4xl md:text-7xl text-mm-beige font-arca-bold tracking-widest text-center md:text-left transition-all duration-500 group-hover:tracking-[0.15em] group-hover:text-white">
-                            ALOJAMIENTO
-                        </h2>
-                    </div>
-                </div>
-
-                <div
-                    class="absolute right-0 bottom-0 h-full w-1/2 hidden md:flex items-end justify-end pointer-events-none md:pointer-events-auto z-10">
-                    <img src="./images/domo.png" alt="Domo" class="
+                    <img src="./images/DOMO-01-CELULAR.png" alt="Domo Mobile" class="
+                        block md:hidden
                         relative
-                        h-[115%] w-auto max-w-none
-                        object-cover 
+                        h-full w-auto max-w-none
+                        object-contain 
                         right-0
                         pointer-events-none
                     ">
+                    <img src="./images/DOMO-01-PC.png" alt="Domo PC" class="
+                        hidden md:block
+                        relative
+                        h-[115%] w-auto max-w-none
+                        object-contain 
+                        right-0
+                        pointer-events-none
+                    ">
+                </div>
+
+                <div class="container mx-auto px-4 relative h-full flex items-center z-20">
+                    <div class="w-full md:w-1/2 md:ml-auto flex justify-end pr-6 md:pr-20">
+                        <h2
+                            class="text-3xl md:text-7xl text-mm-beige font-arca-bold tracking-widest text-right transition-all duration-500 group-hover:tracking-[0.15em] group-hover:text-white">
+                            ALOJAMIENTO
+                        </h2>
+                    </div>
                 </div>
             </section>
         </a>
@@ -221,8 +223,7 @@
             <div id="parallax-experiences-container" class="absolute w-full h-[160%] -mt-[15%] brightness-[0.6]">
                 <img id="experiences-fallback-img"
                     src="https://images.unsplash.com/photo-1501555088652-021faa106b9b?q=80&w=1920&auto=format&fit=crop"
-                    alt="Background"
-                    class="w-full h-full object-cover object-top transition-opacity duration-1000">
+                    alt="Background" class="w-full h-full object-cover object-top transition-opacity duration-1000">
                 <video id="experiences-video" autoplay loop muted playsinline
                     class="absolute inset-0 w-full h-full object-cover object-top opacity-0 transition-opacity duration-1000">
                 </video>
