@@ -39,7 +39,6 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <style>
-
         @font-face {
             font-family: 'Arca Majora 3 Bold';
             src: url('./fonts/ArcaMajora3-Bold.otf') format('opentype');
@@ -76,20 +75,20 @@
     </style>
 </head>
 
-<body
-    class="antialiased h-screen w-full overflow-hidden flex flex-col md:flex-row">
+<body class="antialiased h-screen w-full overflow-hidden flex flex-col md:flex-row font-bold">
 
-    <a href="index.html" class="absolute top-4 left-4 md:top-8 md:left-8 z-50 bg-black/30 hover:bg-black/50 text-white rounded-full p-3 backdrop-blur-md transition-all duration-300 shadow-lg flex items-center justify-center">
+    <a href="index.html"
+        class="absolute top-4 left-4 md:top-8 md:left-8 z-50 bg-black/30 hover:bg-black/50 text-white rounded-full p-3 backdrop-blur-md transition-all duration-300 shadow-lg flex items-center justify-center">
         <i data-lucide="arrow-left" class="w-6 h-6"></i>
     </a>
 
     <div onclick="openModal('flora')"
         class="w-full md:flex-1 h-[20vh] md:h-full flex flex-row md:flex-col bg-mm-cream border-b md:border-b-0 md:border-r border-white/50 transition-all duration-500 ease-in-out md:hover:flex-[1.5] group cursor-pointer">
-        
+
         <div class="h-full w-1/2 md:h-1/2 md:w-full flex items-center justify-center">
             <h2 class="text-3xl md:text-6xl text-mm-brown tracking-widest font-semibold">FLORA</h2>
         </div>
-        
+
         <div class="h-full w-1/2 md:h-1/2 md:w-full relative overflow-hidden group cursor-pointer">
             <img src="./images/Domos/FLORA.webp" alt="Flora" class="w-full h-full object-cover">
         </div>
@@ -97,11 +96,11 @@
 
     <div onclick="openModal('alba')"
         class="w-full md:flex-1 h-[20vh] md:h-full flex flex-row md:flex-col bg-white border-b md:border-b-0 md:border-r border-mm-cream/50 transition-all duration-500 ease-in-out md:hover:flex-[1.5] group cursor-pointer">
-        
+
         <div class="h-full w-1/2 md:h-1/2 md:w-full flex items-center justify-center">
             <h2 class="text-3xl md:text-6xl text-mm-brown tracking-widest font-semibold">ALBA</h2>
         </div>
-        
+
         <div class="h-full w-1/2 md:h-1/2 md:w-full relative overflow-hidden group cursor-pointer">
             <img src="./images/Domos/ALBA.webp" alt="Alba" class="w-full h-full object-cover">
         </div>
@@ -109,11 +108,11 @@
 
     <div onclick="openModal('lucia')"
         class="w-full md:flex-1 h-[20vh] md:h-full flex flex-row md:flex-col bg-mm-cream transition-all duration-500 ease-in-out md:hover:flex-[1.5] group cursor-pointer border-b md:border-b-0 md:border-r border-white/50">
-        
+
         <div class="h-full w-1/2 md:h-1/2 md:w-full flex items-center justify-center">
             <h2 class="text-3xl md:text-6xl text-mm-brown tracking-widest font-semibold">LUCIA</h2>
         </div>
-        
+
         <div class="h-full w-1/2 md:h-1/2 md:w-full relative overflow-hidden group cursor-pointer">
             <img src="./images/Domos/LUCIA.webp" alt="Lucia" class="w-full h-full object-cover">
         </div>
@@ -121,8 +120,7 @@
 
     <div
         class="w-full md:flex-1 h-[20vh] md:h-full bg-[#A66F5B] text-mm-cream flex flex-col md:justify-center relative overflow-hidden transition-all duration-500 ease-in-out md:hover:flex-[1.5] group">
-        
-        <!-- Mobile Layout -->
+
         <div class="flex md:hidden w-full h-full flex-row items-center justify-between px-6 py-4">
             <div class="w-1/2 flex items-center justify-center pr-2">
                 <img src="./images/carpa.png" alt="Carpa" class="w-28 h-auto opacity-90 object-contain brightness-200">
@@ -134,7 +132,6 @@
             </div>
         </div>
 
-        <!-- Desktop Layout -->
         <div class="hidden md:flex flex-col items-center justify-center w-full h-full">
             <div class="flex flex-col items-center justify-center h-full pb-20">
                 <img src="./images/carpa.png" alt="Carpa"
@@ -152,27 +149,34 @@
     <div
         class="w-full md:flex-1 h-[20vh] md:h-full bg-[#8C5A3B] text-mm-cream flex flex-col relative overflow-hidden transition-all duration-500 ease-in-out md:hover:flex-[1.5] group">
 
-        <!-- Mobile Layout -->
         <div class="flex md:hidden w-full h-full flex-row justify-between px-6 py-4 font-body">
-            <!-- Left Side -->
             <div class="w-1/2 flex flex-col justify-center gap-2.5 text-left pr-2">
                 <p class="text-xs font-bold tracking-wider leading-relaxed opacity-90">
                     CONSULTA PRECIOS<br>Y DISPONIBILIDAD.
                 </p>
                 <div class="flex flex-col gap-2 text-xs font-semibold">
-                    <a href="https://wa.me/5493513265647" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 group hover:opacity-80 transition-opacity">
-                        <i data-lucide="phone" class="w-4 h-4 stroke-[2]"></i>
+                    <a href="https://wa.me/5493513265647" target="_blank" rel="noopener noreferrer"
+                        class="flex items-center gap-2 group hover:opacity-80 transition-opacity">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 transition-transform group-hover:rotate-12">
+                            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                        </svg>
                         <span>+549 351 3265647</span>
                     </a>
-                    <a href="https://www.instagram.com/modo.monte.alpa" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 group hover:opacity-80 transition-opacity">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 stroke-[2]"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                    <a href="https://www.instagram.com/modo.monte.alpa" target="_blank" rel="noopener noreferrer"
+                        class="flex items-center gap-2 group hover:opacity-80 transition-opacity">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            class="w-4 h-4 stroke-[2]">
+                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                        </svg>
                         <span>@modo.monte.alpa</span>
                     </a>
                 </div>
             </div>
-            
-            <!-- Right Side -->
-            <div class="w-1/2 flex flex-col items-end text-right pl-2 justify-center">
+
+            <div class="w-1/2 flex flex-col items-start text-left pl-2 justify-center">
                 <h2 class="text-2xl font-arca-bold mb-1.5 tracking-widest text-mm-cream">TARIFAS</h2>
                 <div class="space-y-2 text-xs font-semibold tracking-wider text-mm-cream">
                     <p>GENERALES</p>
@@ -182,9 +186,8 @@
             </div>
         </div>
 
-        <!-- Desktop Layout -->
         <div class="hidden md:flex flex-col w-full h-full p-6 md:p-8 relative">
-            <div class="mt-10 text-right">
+            <div class="mt-10 text-left">
                 <h2 class="text-3xl md:text-4xl mb-6">TARIFAS</h2>
                 <div class="space-y-6 text-lg md:text-xl font-body tracking-wide">
                     <p>GENERALES</p>
@@ -194,17 +197,27 @@
                 </div>
             </div>
 
-            <div class="mt-auto text-right">
+            <div class="mt-auto text-left">
                 <p class="text-sm md:text-base font-body mb-4 opacity-90">
                     CONSULTA PRECIOS<br>Y DISPONIBILIDAD.
                 </p>
-                <div class="flex flex-col items-end gap-2 text-sm md:text-base font-body">
-                    <a href="https://wa.me/5493513265647" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 group hover:opacity-80 transition-opacity">
-                        <i data-lucide="phone" class="w-4 h-4 stroke-[2] group-hover:rotate-12 transition-transform"></i>
+                <div class="flex flex-col items-start gap-2 text-sm md:text-base font-body">
+                    <a href="https://wa.me/5493513265647" target="_blank" rel="noopener noreferrer"
+                        class="flex items-center gap-2 group hover:opacity-80 transition-opacity">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 transition-transform group-hover:rotate-12">
+                            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                        </svg>
                         <span>+549 351 3265647</span>
                     </a>
-                    <a href="https://www.instagram.com/modo.monte.alpa" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 group hover:opacity-80 transition-opacity">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 stroke-[2] group-hover:scale-110 transition-transform"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                    <a href="https://www.instagram.com/modo.monte.alpa" target="_blank" rel="noopener noreferrer"
+                        class="flex items-center gap-2 group hover:opacity-80 transition-opacity">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            class="w-4 h-4 stroke-[2] group-hover:scale-110 transition-transform">
+                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                        </svg>
                         <span>@modo.monte.alpa</span>
                     </a>
                 </div>
@@ -243,12 +256,16 @@
                 class="w-full md:w-1/2 lg:w-2/5 h-[55%] md:h-full p-4 md:p-8 flex flex-col justify-start bg-mm-cream overflow-y-auto">
                 <div class="w-full my-auto flex flex-col py-4">
                     <h2 id="modalTitle"
-                        class="text-3xl md:text-4xl text-mm-brown font-arca-bold tracking-widest mb-2 md:mb-4">TITLE</h2>
-                    <div class="space-y-2 md:space-y-3 text-mm-dark font-body text-base md:text-lg opacity-80 mb-2 md:mb-4">
+                        class="text-3xl md:text-4xl text-mm-brown font-arca-bold tracking-widest mb-2 md:mb-4">TITLE
+                    </h2>
+                    <div
+                        class="space-y-2 md:space-y-3 text-mm-dark font-body text-base md:text-lg opacity-80 mb-2 md:mb-4">
                         <p id="modalDescription" class="whitespace-pre-line"></p>
-                        <ul id="modalAmenities" class="list-none space-y-1.5 md:space-y-2 mt-2 md:mt-4 text-sm md:text-base font-semibold">
+                        <ul id="modalAmenities"
+                            class="list-none space-y-1.5 md:space-y-2 mt-2 md:mt-4 text-sm md:text-base font-semibold">
                         </ul>
-                        <p id="modalFooter" class="text-sm md:text-base font-bold text-mm-brown mt-4 text-center tracking-widest"></p>
+                        <p id="modalFooter"
+                            class="text-sm md:text-base font-bold text-mm-brown mt-4 text-center tracking-widest"></p>
                     </div>
                 </div>
             </div>
@@ -336,7 +353,7 @@
 
             document.getElementById('modalTitle').textContent = data.title;
             document.getElementById('modalDescription').innerHTML = data.description;
-            
+
             const amenitiesList = document.getElementById('modalAmenities');
             amenitiesList.innerHTML = '';
             if (data.amenities && data.amenities.length > 0) {
