@@ -104,10 +104,15 @@
     <header
         class="relative h-screen w-full flex flex-col items-center justify-center text-center text-white overflow-visible">
         <div class="absolute inset-0 z-0 overflow-hidden">
-            <img id="parallax-header-img"
-                src="https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?q=80&w=1920&auto=format&fit=crop"
-                alt="Hero"
-                class="absolute top-[-25%] left-0 w-full h-[130%] object-cover object-center brightness-[0.7]">
+            <div id="parallax-header-container" class="absolute top-[-25%] left-0 w-full h-[130%] brightness-[0.7]">
+                <img id="header-fallback-img"
+                    src="https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?q=80&w=1920&auto=format&fit=crop"
+                    alt="Hero"
+                    class="w-full h-full object-cover object-center transition-opacity duration-1000">
+                <video id="header-video" autoplay loop muted playsinline
+                    class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-1000">
+                </video>
+            </div>
         </div>
 
         <div class="relative z-10 mt-6 px-4 animate-fade-in-up">
@@ -213,9 +218,15 @@
 
     <section class="relative h-screen flex flex-col items-center justify-center text-center z-0 group">
         <div class="absolute inset-0 z-0 overflow-hidden">
-            <img id="parallax-experiences-img"
-                src="https://images.unsplash.com/photo-1501555088652-021faa106b9b?q=80&w=1920&auto=format&fit=crop"
-                alt="Background" class="w-full h-[160%] object-cover object-top -mt-[15%] brightness-[0.6]">
+            <div id="parallax-experiences-container" class="absolute w-full h-[160%] -mt-[15%] brightness-[0.6]">
+                <img id="experiences-fallback-img"
+                    src="https://images.unsplash.com/photo-1501555088652-021faa106b9b?q=80&w=1920&auto=format&fit=crop"
+                    alt="Background"
+                    class="w-full h-full object-cover object-top transition-opacity duration-1000">
+                <video id="experiences-video" autoplay loop muted playsinline
+                    class="absolute inset-0 w-full h-full object-cover object-top opacity-0 transition-opacity duration-1000">
+                </video>
+            </div>
         </div>
 
         <div class="relative z-10 w-full px-4 text-white">
@@ -319,6 +330,7 @@
 
     <script>
         lucide.createIcons();
+
         function updateParallax(elementId, speed = 0.3) {
             const element = document.getElementById(elementId);
             if (!element) return;
@@ -339,9 +351,48 @@
             }
         }
 
-        window.addEventListener('scroll', function () {
-            updateParallax('parallax-header-img', 0.3);
-            updateParallax('parallax-experiences-img', 0.2);
+        function initParallax() {
+            updateParallax('parallax-header-container', 0.3);
+            updateParallax('parallax-experiences-container', 0.2);
+        }
+
+        window.addEventListener('scroll', initParallax);
+        window.addEventListener('resize', initParallax);
+        initParallax();
+
+        function setupResponsiveVideo(videoId, fallbackId, mobileSrc, desktopSrc) {
+            const video = document.getElementById(videoId);
+            const fallback = document.getElementById(fallbackId);
+            if (!video || !fallback) return;
+
+            const isMobile = window.innerWidth < 768;
+            const selectedSrc = isMobile ? mobileSrc : desktopSrc;
+
+            video.src = selectedSrc;
+            video.load();
+
+            video.addEventListener('playing', () => {
+                video.classList.remove('opacity-0');
+                video.classList.add('opacity-100');
+                setTimeout(() => {
+                    fallback.classList.add('opacity-0');
+                }, 1000);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            setupResponsiveVideo(
+                'header-video',
+                'header-fallback-img',
+                './videos/PORTADA CELULAR.mp4',
+                './videos/PORTADA WEB.mp4'
+            );
+            setupResponsiveVideo(
+                'experiences-video',
+                'experiences-fallback-img',
+                './videos/EXPERIENCIAS CELULAR.mp4',
+                './videos/EXPERIENCIAS WEB.mp4'
+            );
         });
     </script>
 </body>
