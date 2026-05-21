@@ -83,7 +83,7 @@
         <i data-lucide="arrow-left" class="w-6 h-6"></i>
     </a>
 
-    <div onclick="openModal('flora')"
+    <a href="alojamientos/flora.html"
         class="w-full md:flex-1 h-[20vh] md:h-full flex flex-row md:flex-col bg-mm-cream border-b md:border-b-0 md:border-r border-white/50 transition-all duration-500 ease-in-out md:hover:flex-[1.5] group cursor-pointer">
 
         <div class="h-full w-1/2 md:h-1/2 md:w-full flex items-center justify-center">
@@ -93,9 +93,9 @@
         <div class="h-full w-1/2 md:h-1/2 md:w-full relative overflow-hidden group cursor-pointer">
             <img src="./images/Domos/FLORA.webp" alt="Flora" class="w-full h-full object-cover">
         </div>
-    </div>
+    </a>
 
-    <div onclick="openModal('alba')"
+    <a href="alojamientos/alba.html"
         class="w-full md:flex-1 h-[20vh] md:h-full flex flex-row md:flex-col bg-white border-b md:border-b-0 md:border-r border-mm-cream/50 transition-all duration-500 ease-in-out md:hover:flex-[1.5] group cursor-pointer">
 
         <div class="h-full w-1/2 md:h-1/2 md:w-full flex items-center justify-center">
@@ -105,9 +105,9 @@
         <div class="h-full w-1/2 md:h-1/2 md:w-full relative overflow-hidden group cursor-pointer">
             <img src="./images/Domos/ALBA.webp" alt="Alba" class="w-full h-full object-cover">
         </div>
-    </div>
+    </a>
 
-    <div onclick="openModal('lucia')"
+    <a href="alojamientos/lucia.html"
         class="w-full md:flex-1 h-[20vh] md:h-full flex flex-row md:flex-col bg-mm-cream transition-all duration-500 ease-in-out md:hover:flex-[1.5] group cursor-pointer border-b md:border-b-0 md:border-r border-white/50">
 
         <div class="h-full w-1/2 md:h-1/2 md:w-full flex items-center justify-center">
@@ -117,7 +117,7 @@
         <div class="h-full w-1/2 md:h-1/2 md:w-full relative overflow-hidden group cursor-pointer">
             <img src="./images/Domos/LUCIA.webp" alt="Lucia" class="w-full h-full object-cover">
         </div>
-    </div>
+    </a>
 
     <div
         class="w-full md:flex-1 h-[15vh] md:h-full bg-[#A66F5B] text-mm-cream flex flex-col md:justify-center relative overflow-visible md:overflow-hidden transition-all duration-500 ease-in-out md:hover:flex-[1.5] group z-10">
@@ -235,249 +235,7 @@
         </div>
     </div>
 
-    <div id="domoModal"
-        class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center opacity-0 transition-opacity duration-300">
-        <div class="bg-mm-cream w-11/12 md:w-5/6 lg:w-4/5 2xl:w-3/4 h-[95vh] md:h-[85vh] 2xl:h-[80vh] rounded-xl overflow-hidden flex flex-col md:flex-row relative shadow-2xl transform scale-95 transition-transform duration-300"
-            id="modalContent">
-
-            <button onclick="closeModal()"
-                class="absolute top-4 right-4 z-20 bg-black/20 hover:bg-black/40 md:bg-white/20 md:hover:bg-white/40 backdrop-blur-md rounded-full p-2 transition-colors">
-                <i data-lucide="x" class="w-6 h-6 text-white md:text-mm-dark"></i>
-            </button>
-
-            <div class="w-full md:w-1/2 lg:w-3/5 h-[45%] md:h-full relative bg-black group/carousel">
-                <img id="modalImage" src="" alt="Domo"
-                    class="w-full h-full object-cover transition-opacity duration-300">
-
-                <button onclick="prevImage()"
-                    class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/50 backdrop-blur-md text-white rounded-full p-2 md:opacity-0 md:group-hover/carousel:opacity-100 transition-opacity">
-                    <i data-lucide="chevron-left" class="w-6 h-6"></i>
-                </button>
-                <button onclick="nextImage()"
-                    class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/50 backdrop-blur-md text-white rounded-full p-2 md:opacity-0 md:group-hover/carousel:opacity-100 transition-opacity">
-                    <i data-lucide="chevron-right" class="w-6 h-6"></i>
-                </button>
-
-                <div id="modalDots" class="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
-                </div>
-            </div>
-
-            <div
-                class="w-full md:w-1/2 lg:w-2/5 h-[55%] md:h-full p-4 md:p-8 flex flex-col justify-start bg-mm-cream overflow-y-auto">
-                <div class="w-full my-auto flex flex-col py-4">
-                    <h2 id="modalTitle"
-                        class="text-3xl md:text-4xl text-mm-brown font-arca-bold tracking-widest mb-2 md:mb-4">TITLE
-                    </h2>
-                    <div
-                        class="space-y-2 md:space-y-3 text-mm-dark font-body text-base md:text-lg opacity-80 mb-2 md:mb-4">
-                        <p id="modalDescription" class="whitespace-pre-line"></p>
-                        <ul id="modalAmenities"
-                            class="list-none space-y-1.5 md:space-y-2 mt-2 md:mt-4 text-sm md:text-base font-semibold">
-                        </ul>
-                        <p id="modalFooter"
-                            class="text-sm md:text-base font-bold text-mm-brown mt-4 text-center tracking-widest"></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <script>
-        const alojamientos = {
-            flora: {
-                title: 'FLORA',
-                description: 'Este domo tiene un ventanal panorámico que invita a adentrarse en el monte y sentirse realmente en su interior. Disfrutar de toda la vida que ahí se expresa, dormir bajo las estrellas y amanecer rodeado de aves entre las copa de los árboles.\n\nEsta unidad tiene una capacidad para 2 personas, con posibilidad de agregar un colchón para una persona más y está equipado con:',
-                amenities: [
-                    { icon: 'wifi', text: 'WIFI' },
-                    { icon: 'bed-double', text: 'Cama matrimonial Queen Size<br><span class="text-xs md:text-sm leading-tight font-normal opacity-80">Ropa de cama (Sábanas, acolchados, almohadas viscoelásticas)</span>' },
-                    { icon: 'bath', text: 'Baño privado<br><span class="text-xs md:text-sm leading-tight font-normal opacity-80">(toallas, toallones, shampoo, acondicionador y jabón)</span>' },
-                    { icon: 'utensils', text: 'Cocina equipada<br><span class="text-xs md:text-sm leading-tight font-normal opacity-80">(ollas, utensilios, condimentos esenciales)</span>' },
-                    { icon: 'coffee', text: 'Electrodomésticos<br><span class="text-xs md:text-sm leading-tight font-normal opacity-80">(anafe, frigobar, pava eléctrica)</span>' },
-                    { icon: 'thermometer', text: 'Acondicionamiento térmico<br><span class="text-xs md:text-sm leading-tight font-normal opacity-80">aire acondicionado (frío)<br>estufa a leña (calor)</span>' },
-                    { icon: 'flame', text: 'Terraza privada,<br><span class="text-xs md:text-sm leading-tight font-normal opacity-80">Fogonero privado con parrilla y reposeras exteriores</span>' }
-                ],
-                footer: 'Check in 15:00 hs - Check out 11:00 hs',
-                images: [
-                    './images/Domos/FLORA/01.webp',
-                    './images/Domos/FLORA/02.webp',
-                    './images/Domos/FLORA/03.webp',
-                    './images/Domos/FLORA/04.webp',
-                    './images/Domos/FLORA/08.webp',
-                    './images/Domos/FLORA/09.webp',
-                    './images/Domos/FLORA/10.webp',
-                    './images/Domos/FLORA/11.webp',
-                    './images/Domos/FLORA/12.webp',
-                    './images/Domos/FLORA/13.webp',
-                    './images/Domos/FLORA/14.webp'
-                ]
-            },
-            alba: {
-                title: 'ALBA',
-                description: 'Este domo tiene una vista privilegiada al valle. Desde aquí se puede disfrutar tanto las salidas de la luna en todo su esplendor, como los maravillosos amaneceres desde la comodidad de la cama.\n\nEsta unidad tiene una capacidad para 2 personas, con posibilidad de agregar un colchón para una persona más y está equipado con:',
-                amenities: [
-                    { icon: 'wifi', text: 'WIFI' },
-                    { icon: 'bed-double', text: 'Cama matrimonial Queen Size<br><span class="text-xs md:text-sm leading-tight font-normal opacity-80">Ropa de cama (Sábanas, acolchados, almohadas viscoelásticas)</span>' },
-                    { icon: 'bath', text: 'Baño privado<br><span class="text-xs md:text-sm leading-tight font-normal opacity-80">(toallas, toallones, shampoo, acondicionador y jabón)</span>' },
-                    { icon: 'utensils', text: 'Cocina equipada<br><span class="text-xs md:text-sm leading-tight font-normal opacity-80">(ollas, utensilios, condimentos esenciales)</span>' },
-                    { icon: 'coffee', text: 'Electrodomésticos<br><span class="text-xs md:text-sm leading-tight font-normal opacity-80">(anafe, frigobar, pava eléctrica)</span>' },
-                    { icon: 'thermometer', text: 'Acondicionamiento térmico<br><span class="text-xs md:text-sm leading-tight font-normal opacity-80">aire acondicionado (frío)<br>estufa a leña (calor)</span>' },
-                    { icon: 'flame', text: 'Terraza privada,<br><span class="text-xs md:text-sm leading-tight font-normal opacity-80">Fogonero privado con parrilla y reposeras exteriores</span>' }
-                ],
-                footer: 'Check in 15:00 hs - Check out 11:00 hs',
-                images: [
-                    './images/Domos/ALBA/00.webp',
-                    './images/Domos/ALBA/01.webp',
-                    './images/Domos/ALBA/02.webp',
-                    './images/Domos/ALBA/03.webp',
-                    './images/Domos/ALBA/04.webp',
-                    './images/Domos/ALBA/05.webp',
-                    './images/Domos/ALBA/06.webp',
-                    './images/Domos/ALBA/07.webp',
-                    './images/Domos/ALBA/08.webp',
-                    './images/Domos/ALBA/10.webp',
-                    './images/Domos/ALBA/11.webp',
-                    './images/Domos/ALBA/12.webp',
-                    './images/Domos/ALBA/13.webp'
-                ]
-            },
-            lucia: {
-                title: 'LUCIA',
-                description: '<b>En proceso...</b>\n\nEste domo será un verdadero observatorio al cielo, desde aquí se podrá apreciar la inmensidad del cosmo, las estrellas sus constelaciones y la plenitud de la luna.\neste domo tendrá un caracter muy íntimo y acogedor, que invitará a relajar y disfrutar.',
-                amenities: [],
-                footer: '',
-                images: [
-                    './images/Domos/LUCIA.webp'
-                ]
-            }
-        };
-
-        let currentModalImages = [];
-        let currentImageIndex = 0;
-
-        function openModal(domoId) {
-            const data = alojamientos[domoId];
-            if (!data) return;
-
-            currentModalImages = data.images;
-            currentImageIndex = 0;
-
-            document.getElementById('modalTitle').textContent = data.title;
-            document.getElementById('modalDescription').innerHTML = data.description;
-
-            const amenitiesList = document.getElementById('modalAmenities');
-            amenitiesList.innerHTML = '';
-            if (data.amenities && data.amenities.length > 0) {
-                data.amenities.forEach(item => {
-                    amenitiesList.innerHTML += `<li class="flex items-start gap-2 md:gap-3"><i data-lucide="${item.icon}" class="w-4 h-4 md:w-5 md:h-5 text-mm-terracotta mt-0.5 shrink-0"></i> <div>${item.text}</div></li>`;
-                });
-            }
-
-            const footer = document.getElementById('modalFooter');
-            if (data.footer) {
-                footer.textContent = data.footer;
-                footer.style.display = 'block';
-            } else {
-                footer.style.display = 'none';
-            }
-
-            updateModalImage();
-            renderDots();
-
-            const modal = document.getElementById('domoModal');
-            const content = document.getElementById('modalContent');
-
-            modal.classList.remove('hidden');
-            void modal.offsetWidth;
-            modal.classList.remove('opacity-0');
-            modal.classList.add('opacity-100');
-
-            content.classList.remove('scale-95');
-            content.classList.add('scale-100');
-            const prevBtn = modal.querySelector('button[onclick="prevImage()"]');
-            const nextBtn = modal.querySelector('button[onclick="nextImage()"]');
-            if (currentModalImages.length <= 1) {
-                prevBtn.style.display = 'none';
-                nextBtn.style.display = 'none';
-            } else {
-                prevBtn.style.display = 'block';
-                nextBtn.style.display = 'block';
-            }
-            lucide.createIcons();
-        }
-
-        function closeModal() {
-            const modal = document.getElementById('domoModal');
-            const content = document.getElementById('modalContent');
-
-            modal.classList.remove('opacity-100');
-            modal.classList.add('opacity-0');
-
-            content.classList.remove('scale-100');
-            content.classList.add('scale-95');
-
-            setTimeout(() => {
-                modal.classList.add('hidden');
-            }, 300);
-        }
-
-        function nextImage() {
-            if (currentModalImages.length <= 1) return;
-            currentImageIndex = (currentImageIndex + 1) % currentModalImages.length;
-            updateModalImage();
-            updateDots();
-        }
-
-        function prevImage() {
-            if (currentModalImages.length <= 1) return;
-            currentImageIndex = (currentImageIndex - 1 + currentModalImages.length) % currentModalImages.length;
-            updateModalImage();
-            updateDots();
-        }
-
-        function updateModalImage() {
-            const img = document.getElementById('modalImage');
-            img.style.opacity = '0.5';
-            setTimeout(() => {
-                img.src = currentModalImages[currentImageIndex];
-                img.style.opacity = '1';
-            }, 150);
-        }
-
-        function renderDots() {
-            const dotsContainer = document.getElementById('modalDots');
-            dotsContainer.innerHTML = '';
-
-            if (currentModalImages.length <= 1) return;
-
-            currentModalImages.forEach((_, idx) => {
-                const dot = document.createElement('button');
-                dot.className = `w-2 h-2 md:w-2.5 md:h-2.5 rounded-full transition-all duration-300 ${idx === currentImageIndex ? 'bg-white scale-125' : 'bg-white/50 hover:bg-white/80'}`;
-                dot.onclick = () => {
-                    currentImageIndex = idx;
-                    updateModalImage();
-                    updateDots();
-                };
-                dotsContainer.appendChild(dot);
-            });
-        }
-
-        function updateDots() {
-            const dotsContainer = document.getElementById('modalDots');
-            Array.from(dotsContainer.children).forEach((dot, idx) => {
-                if (idx === currentImageIndex) {
-                    dot.className = 'w-2 h-2 md:w-2.5 md:h-2.5 rounded-full transition-all duration-300 bg-white scale-125';
-                } else {
-                    dot.className = 'w-2 h-2 md:w-2.5 md:h-2.5 rounded-full transition-all duration-300 bg-white/50 hover:bg-white/80';
-                }
-            });
-        }
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') closeModal();
-        });
-        document.getElementById('domoModal').addEventListener('click', (e) => {
-            if (e.target.id === 'domoModal') closeModal();
-        });
-
         lucide.createIcons();
     </script>
 </body>
