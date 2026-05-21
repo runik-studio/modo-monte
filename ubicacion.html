@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es" class="bg-mm-cream">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,10 +31,10 @@
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap"
+        rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-
         @font-face {
             font-family: 'Arca Majora 3 Bold';
             src: url('./fonts/ArcaMajora3-Bold.otf') format('opentype');
@@ -48,31 +49,41 @@
             font-style: normal;
         }
 
-        body { font-family: 'Nunito Sans', sans-serif; }
+        body {
+            font-family: 'Nunito Sans', sans-serif;
+        }
     </style>
 </head>
+
 <body class="antialiased min-h-screen w-full overflow-x-hidden flex flex-col md:flex-row">
 
-    <a href="index.html" class="absolute top-4 left-4 md:top-8 md:left-8 z-50 bg-black/30 hover:bg-black/50 text-white rounded-full p-3 backdrop-blur-md transition-all duration-300 shadow-lg flex items-center justify-center">
+    <a href="index.html"
+        class="absolute top-4 left-4 md:top-8 md:left-8 z-50 bg-black/30 hover:bg-black/50 text-white rounded-full p-3 backdrop-blur-md transition-all duration-300 shadow-lg flex items-center justify-center">
         <i data-lucide="arrow-left" class="w-6 h-6"></i>
     </a>
 
-    <div class="w-full md:w-1/2 lg:w-[50%] h-auto md:h-screen bg-mm-cream flex flex-col items-center pt-24 pb-8 px-6 md:pt-28 md:pb-8 md:px-8 lg:px-12 lg:pb-8 lg:pt-24 2xl:p-12 2xl:pt-32 overflow-y-auto transition-opacity duration-300" id="textContent">
-        
+    <div class="w-full md:w-1/2 lg:w-[50%] h-[60vh] md:h-screen bg-mm-cream flex flex-col items-center pt-14 pb-14 px-6 md:py-16 md:px-8 lg:px-12 2xl:py-24 2xl:px-12 overflow-y-auto transition-opacity duration-300"
+        id="textContent">
+
     </div>
 
-    <div class="w-full md:w-1/2 lg:w-[50%] h-[50vh] md:h-screen relative bg-mm-brown group/carousel overflow-hidden flex flex-col">
-        <img id="carouselImage" src="" alt="Ubicación Modo Monte" class="w-full h-full object-cover transition-opacity duration-300">
+    <div
+        class="w-full md:w-1/2 lg:w-[50%] h-[40vh] md:h-screen relative bg-mm-brown group/carousel overflow-hidden flex flex-col">
+        <img id="carouselImage" src="" alt="Ubicación Modo Monte"
+            class="w-full h-full object-cover transition-opacity duration-300">
 
-        <button id="accesosBtn" onclick="nextSlide()" class="absolute bottom-8 right-8 text-white font-arca-bold text-3xl md:text-5xl tracking-widest drop-shadow-lg flex items-center gap-2 hover:scale-105 transition-transform z-20 hidden">
+        <button id="accesosBtn" onclick="nextSlide()"
+            class="absolute bottom-8 right-8 text-white font-arca-bold text-3xl md:text-5xl tracking-widest drop-shadow-lg flex items-center gap-2 hover:scale-105 transition-transform z-20 hidden">
             ACCESOS <i data-lucide="chevrons-right" class="w-8 h-8 md:w-12 md:h-12"></i>
         </button>
 
         <div id="mapControls" class="absolute bottom-8 right-8 hidden z-20 flex gap-4">
-            <button onclick="prevSlide()" class="bg-white/30 hover:bg-white/50 backdrop-blur-md text-white rounded-full p-3 transition-colors">
+            <button onclick="prevSlide()"
+                class="bg-white/30 hover:bg-white/50 backdrop-blur-md text-white rounded-full p-3 transition-colors">
                 <i data-lucide="chevron-left" class="w-6 h-6"></i>
             </button>
-            <button onclick="nextSlide()" class="bg-white/30 hover:bg-white/50 backdrop-blur-md text-white rounded-full p-3 transition-colors">
+            <button onclick="nextSlide()"
+                class="bg-white/30 hover:bg-white/50 backdrop-blur-md text-white rounded-full p-3 transition-colors">
                 <i data-lucide="chevron-right" class="w-6 h-6"></i>
             </button>
         </div>
@@ -84,21 +95,19 @@
                 image: './images/Ubicacion/20251214_094300.webp',
                 isMap: false,
                 html: `
-                    <div class="max-w-xl w-full text-mm-brown text-center space-y-4 2xl:space-y-6 my-auto">
-                        <p class="font-semibold text-base md:text-lg 2xl:text-xl leading-relaxed">
-                            Ubicado en ALPA CORRAL<br>
-                            un tesoro de las<br>
-                            SIERRAS DEL SUR DE CÓRDOBA<br>
-                            que pocos conocen.
+                    <div class="max-w-xl w-full text-mm-brown text-center space-y-2 md:space-y-4 2xl:space-y-6 my-auto">
+                        <p class="font-semibold text-xs md:text-lg 2xl:text-xl leading-snug md:leading-relaxed">
+                            Ubicado en ALPA CORRAL, un tesoro de las<br>
+                            SIERRAS DEL SUR DE CÓRDOBA que pocos conocen.
                         </p>
-                        <p class="font-semibold text-base md:text-lg 2xl:text-xl leading-relaxed">
+                        <p class="font-semibold text-xs md:text-lg 2xl:text-xl leading-snug md:leading-relaxed">
                             Esta localidad es distinguida por su hermoso entorno<br>
                             natural con sus ríos transparentes, cascadas y<br>
                             bosques que la convierten en un destino ideal<br>
                             para los amantes de la naturaleza y<br>
                             las actividades al aire libre.
                         </p>
-                        <p class="font-semibold text-base md:text-lg 2xl:text-xl leading-relaxed">
+                        <p class="font-semibold text-xs md:text-lg 2xl:text-xl leading-snug md:leading-relaxed">
                             El pueblo conserva un ambiente tranquilo,<br>
                             perfecto para desconectar y relajarse,<br>
                             con opciones de actividades de ecoturismo<br>
@@ -107,7 +116,7 @@
                             gastronómicas locales que reflejan la<br>
                             hospitalidad de la comunidad.
                         </p>
-                        <p class="font-semibold text-base md:text-lg 2xl:text-xl leading-relaxed">
+                        <p class="font-semibold text-xs md:text-lg 2xl:text-xl leading-snug md:leading-relaxed">
                             MODO MONTE se encuentra en un pequeño<br>
                             monte serrano a 2,5km del centro del<br>
                             poblado y a 800m del río Las Barrancas.
@@ -119,15 +128,15 @@
                 image: './images/ICONOS ACCESOS-18.png',
                 isMap: true,
                 html: `
-                    <div class="max-w-xl w-full text-mm-brown space-y-8">
-                        <h1 class="text-5xl md:text-7xl font-arca-bold tracking-widest uppercase leading-none mb-6">
+                    <div class="max-w-xl w-full text-mm-brown space-y-2 md:space-y-8">
+                        <h1 class="text-3xl md:text-7xl font-arca-bold tracking-widest uppercase leading-none mb-1.5 md:mb-6">
                             DESDE<br>CORDOBA
                         </h1>
-                        <p class="font-semibold text-base md:text-lg 2xl:text-xl leading-relaxed">
+                        <p class="font-semibold text-sm md:text-lg 2xl:text-xl leading-snug md:leading-relaxed">
                             Por Ruta Nacional 36 (Autovía)<br>hasta la localidad de Elena;<br>
                             desde allí tomar la Ruta Provincial S-252, hasta<br>Río de los Sauces, allí tomar la ruta 23 hasta la<br>localidad de Alpa Corral.
                         </p>
-                        <p class="font-semibold text-base md:text-lg 2xl:text-xl leading-relaxed mt-8">
+                        <p class="font-semibold text-sm md:text-lg 2xl:text-xl leading-snug md:leading-relaxed mt-2 md:mt-8">
                             Todo el trayecto está asfaltado.
                         </p>
                     </div>
@@ -137,11 +146,11 @@
                 image: './images/ICONOS ACCESOS-19.png',
                 isMap: true,
                 html: `
-                    <div class="max-w-xl w-full text-mm-brown space-y-8">
-                        <h1 class="text-5xl md:text-7xl font-arca-bold tracking-widest uppercase leading-none mb-6 text-mm-brown">
+                    <div class="max-w-xl w-full text-mm-brown space-y-2 md:space-y-8">
+                        <h1 class="text-3xl md:text-7xl font-arca-bold tracking-widest uppercase leading-none mb-1.5 md:mb-6 text-mm-brown">
                             DESDE<br>SAN LUIS<br>MENDOZA<br>SAN JUAN
                         </h1>
-                        <p class="font-semibold text-base md:text-lg 2xl:text-xl leading-relaxed">
+                        <p class="font-semibold text-sm md:text-lg 2xl:text-xl leading-snug md:leading-relaxed">
                             Tomar la Ruta provincial 20 hasta su intersección con<br>la Ruta Nacional 148 (600m),<br>
                             luego tomar la Ruta provincial 10; hasta la punilla,<br>allí tomar la Ruta Provincial 30 hasta el cruce con la<br>ruta 23; desde allí seguir por Ruta Provincial 23<br>hasta la Localidad de Alpa Corral.
                         </p>
@@ -152,34 +161,34 @@
                 image: './images/ICONOS ACCESOS-20.png',
                 isMap: true,
                 html: `
-                    <div class="max-w-xl w-full text-mm-brown">
-                        <h2 class="text-3xl md:text-5xl font-arca-bold tracking-widest uppercase text-mm-brown mb-2">
-                            DESDE<br>BUENOS AIRES
+                    <div class="max-w-xl w-full text-mm-brown space-y-1.5 md:space-y-0">
+                        <h2 class="text-xl md:text-5xl font-arca-bold tracking-widest uppercase text-mm-brown mb-0.5 md:mb-2">
+                            DESDE BUENOS AIRES
                         </h2>
-                        <p class="font-semibold text-base md:text-lg 2xl:text-xl leading-tight mb-6">
+                        <p class="font-semibold text-xs md:text-lg 2xl:text-xl leading-snug md:leading-tight mb-2 md:mb-6">
                             Por Ruta Nacional 9, hasta la altura de Pilar;<br>
                             tomar Ruta Nacional 8 hasta la Ciudad Río Cuarto.
                         </p>
 
-                        <h2 class="text-3xl md:text-5xl font-arca-bold tracking-widest uppercase text-mm-brown mb-2">
+                        <h2 class="text-xl md:text-5xl font-arca-bold tracking-widest uppercase text-mm-brown mb-0.5 md:mb-2">
                             ROSARIO
                         </h2>
-                        <p class="font-semibold text-base md:text-lg 2xl:text-xl leading-tight mb-6">
+                        <p class="font-semibold text-xs md:text-lg 2xl:text-xl leading-snug md:leading-tight mb-2 md:mb-6">
                             Partiendo por Autopista 9, hasta Villa María<br>
                             tomar la Ruta Nacional 158, hasta la Ciudad Río Cuarto.
                         </p>
 
-                        <h2 class="text-3xl md:text-5xl font-arca-bold tracking-widest uppercase text-mm-brown mb-2">
+                        <h2 class="text-xl md:text-5xl font-arca-bold tracking-widest uppercase text-mm-brown mb-0.5 md:mb-2">
                             LA PAMPA
                         </h2>
-                        <p class="font-semibold text-base md:text-lg 2xl:text-xl leading-tight mb-6">
+                        <p class="font-semibold text-xs md:text-lg 2xl:text-xl leading-snug md:leading-tight mb-2 md:mb-6">
                             Partiendo por Ruta Nacional 35 hasta la ciudad de<br>Río Cuarto.
                         </p>
 
-                        <h3 class="text-xl md:text-2xl font-arca-bold tracking-widest uppercase text-mm-brown mb-2">
+                        <h3 class="text-sm md:text-2xl font-arca-bold tracking-widest uppercase text-mm-brown mb-0.5 md:mb-2">
                             DESDE RÍO CUARTO
                         </h3>
-                        <p class="font-semibold text-base md:text-lg 2xl:text-xl leading-tight">
+                        <p class="font-semibold text-xs md:text-lg 2xl:text-xl leading-snug md:leading-tight">
                             Tomar la ruta provincial 30<br>hasta el cruce con la ruta 23;<br>
                             seguir por Ruta Provincial 23 hasta Alpa Corral.
                         </p>
@@ -203,17 +212,17 @@
             setTimeout(() => {
                 textContent.innerHTML = slide.html;
                 textContent.style.opacity = '1';
-                
+
                 if (changingImage) {
                     img.src = slide.image;
-                    img.className = slide.isMap ? 
-                        "w-full h-full object-contain md:object-cover transition-opacity duration-300" : 
+                    img.className = slide.isMap ?
+                        "w-full h-full object-contain md:object-cover transition-opacity duration-300" :
                         "w-full h-full object-cover transition-opacity duration-300";
                     img.style.opacity = '1';
                 }
                 document.getElementById('accesosBtn').classList.toggle('hidden', slide.isMap);
                 document.getElementById('mapControls').classList.toggle('hidden', !slide.isMap);
-                
+
                 lucide.createIcons();
             }, 150);
         }
@@ -234,4 +243,5 @@
         });
     </script>
 </body>
+
 </html>

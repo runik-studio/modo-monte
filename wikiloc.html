@@ -64,13 +64,13 @@
     </a>
 
     <div id="leftPane"
-        class="w-full md:w-1/2 lg:w-[50%] h-[50vh] md:h-screen relative bg-black transition-colors duration-500 overflow-hidden flex flex-col justify-center items-center">
+        class="w-full md:w-1/2 lg:w-[50%] h-[40vh] md:h-screen relative bg-black transition-colors duration-500 overflow-hidden flex flex-col justify-center items-center">
         <img id="carouselImage" src="" alt="Wikiloc Modo Monte"
             class="w-full h-full object-cover transition-opacity duration-300">
     </div>
 
-    <div
-        class="w-full md:w-1/2 lg:w-[50%] h-auto md:h-screen bg-mm-cream flex flex-col items-center py-8 px-6 md:p-8 lg:px-12 lg:py-4 2xl:p-12 overflow-y-auto relative">
+    <div id="rightPane"
+        class="w-full md:w-1/2 lg:w-[50%] h-[60vh] md:h-screen bg-mm-cream flex flex-col items-center py-4 px-5 md:p-8 lg:px-12 lg:py-4 2xl:p-12 overflow-y-auto relative">
         <div id="textContent"
             class="max-w-3xl w-full text-mm-brown text-center flex flex-col items-center justify-center transition-opacity duration-300 my-auto">
             
@@ -94,20 +94,20 @@
                 image: './images/Wikiloc/FRAN Y AMA.webp',
                 isMap: false,
                 html: `
-                    <p class="text-2xl md:text-3xl 2xl:text-4xl font-semibold mb-1">Descargá la app.</p>
-                    <h1 class="text-6xl md:text-7xl 2xl:text-9xl font-arca-bold tracking-widest uppercase text-mm-brown mb-2 2xl:mb-4">WIKILOC</h1>
-                    <p class="text-lg md:text-xl 2xl:text-2xl font-semibold mb-6 2xl:mb-8">Escaneá el QR<br>e ingresá en nuestro perfil!</p>
-                    <div class="w-[250px] h-[250px] md:w-[320px] md:h-[320px] 2xl:w-[450px] 2xl:h-[450px] overflow-hidden flex items-center justify-center mb-6 2xl:mb-10 mx-auto">
+                    <p class="text-sm md:text-3xl 2xl:text-4xl font-semibold mb-1">Descargá la app.</p>
+                    <h1 class="text-5xl md:text-7xl 2xl:text-9xl font-arca-bold tracking-widest uppercase text-mm-brown mb-1 md:mb-2 2xl:mb-4">WIKILOC</h1>
+                    <p class="text-xs md:text-xl 2xl:text-2xl font-semibold mb-2 md:mb-6 2xl:mb-8">Escaneá el QR<br>e ingresá en nuestro perfil!</p>
+                    <div class="w-[140px] h-[140px] md:w-[320px] md:h-[320px] 2xl:w-[450px] 2xl:h-[450px] overflow-hidden flex items-center justify-center mb-2 md:mb-6 2xl:mb-10 mx-auto">
                         <img src="./images/Wikiloc/ICONO TREKKING-21.png" alt="QR Code" class="w-full h-full object-contain scale-[1.9]">
                     </div>
-                    <p class="text-2xl md:text-3xl 2xl:text-4xl font-semibold leading-snug">Registrate con tu cuenta<br>Y comenzá la aventura</p>
+                    <p class="text-xs md:text-3xl 2xl:text-4xl font-semibold leading-snug">Registrate con tu cuenta<br>Y comenzá la aventura</p>
                 `
             },
             {
                 image: './images/Wikiloc/ICONO TREKKING-22.png',
                 isMap: true,
                 html: `
-                    <div class="space-y-8 2xl:space-y-12 max-w-xl mx-auto text-xl md:text-2xl 2xl:text-3xl font-semibold leading-relaxed">
+                    <div class="space-y-4 md:space-y-12 max-w-xl mx-auto text-sm md:text-2xl 2xl:text-3xl font-semibold leading-relaxed">
                         <p>
                             Para seguir los recorridos con<br>
                             todas las funciones se requiere la<br>
@@ -118,13 +118,13 @@
                                     <path d="M80 60 L 90 40" />
                                     <path d="M80 60 L 60 50" />
                                 </svg>
-                                <span class="absolute right-0 md:-right-4 top-[180%] md:top-[160%] text-sm md:text-base 2xl:text-lg font-bold -rotate-6 whitespace-nowrap text-mm-brown translate-x-[30%] md:translate-x-[70%]">
+                                <span class="absolute right-0 md:-right-4 top-[180%] md:top-[160%] text-xs md:text-base 2xl:text-lg font-bold -rotate-6 whitespace-nowrap text-mm-brown translate-x-[30%] md:translate-x-[70%]">
                                     (tenes 14 días gratis)
                                 </span>
                             </span>
                         </p>
                         
-                        <p class="pt-8 md:pt-12">
+                        <p class="pt-2 md:pt-12">
                             Cuando seguís el track, Wikiloc<br>
                             comienza a grabar tu recorrido.
                         </p>
@@ -165,10 +165,10 @@
                     img.src = slide.image;
                     if (slide.isMap) {
                         img.className = "w-[90%] h-[90%] object-contain transition-opacity duration-300";
-                        leftPane.className = "w-full md:w-1/2 lg:w-[50%] h-[50vh] md:h-screen relative bg-mm-brown transition-colors duration-500 overflow-hidden flex flex-col justify-center items-center";
+                        leftPane.className = "w-full md:w-1/2 lg:w-[50%] h-[40vh] md:h-screen relative bg-mm-brown transition-colors duration-500 overflow-hidden flex flex-col justify-center items-center";
                     } else {
                         img.className = "w-full h-full object-cover transition-opacity duration-300";
-                        leftPane.className = "w-full md:w-1/2 lg:w-[50%] h-[50vh] md:h-screen relative bg-black transition-colors duration-500 overflow-hidden flex flex-col justify-center items-center";
+                        leftPane.className = "w-full md:w-1/2 lg:w-[50%] h-[40vh] md:h-screen relative bg-black transition-colors duration-500 overflow-hidden flex flex-col justify-center items-center";
                     }
                     img.style.opacity = '1';
                 }
