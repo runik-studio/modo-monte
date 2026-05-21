@@ -62,7 +62,7 @@
         <i data-lucide="arrow-left" class="w-6 h-6"></i>
     </a>
 
-    <div class="w-full md:w-1/2 lg:w-[50%] h-[60vh] md:h-screen bg-mm-cream flex flex-col items-center pt-14 pb-14 px-6 md:py-16 md:px-8 lg:px-12 2xl:py-24 2xl:px-12 overflow-y-auto transition-opacity duration-300"
+    <div class="w-full md:w-1/2 lg:w-[50%] h-[60vh] md:h-screen bg-mm-cream flex flex-col items-center pt-20 pb-12 px-6 md:py-16 md:px-8 lg:px-12 2xl:py-24 2xl:px-12 overflow-y-auto transition-opacity duration-300"
         id="textContent">
 
     </div>
@@ -77,13 +77,13 @@
             ACCESOS <i data-lucide="chevrons-right" class="w-8 h-8 md:w-12 md:h-12"></i>
         </button>
 
-        <div id="mapControls" class="absolute bottom-8 right-8 hidden z-20 flex gap-4">
+        <div id="mapControls" class="absolute inset-x-0 top-1/2 -translate-y-1/2 z-20 hidden flex justify-between px-4 pointer-events-none md:inset-auto md:top-auto md:bottom-8 md:right-8 md:left-auto md:transform-none md:flex md:gap-4 md:px-0">
             <button onclick="prevSlide()"
-                class="bg-white/30 hover:bg-white/50 backdrop-blur-md text-white rounded-full p-3 transition-colors">
+                class="bg-white/30 hover:bg-white/50 backdrop-blur-md text-white rounded-full p-3 transition-colors pointer-events-auto shadow-lg">
                 <i data-lucide="chevron-left" class="w-6 h-6"></i>
             </button>
             <button onclick="nextSlide()"
-                class="bg-white/30 hover:bg-white/50 backdrop-blur-md text-white rounded-full p-3 transition-colors">
+                class="bg-white/30 hover:bg-white/50 backdrop-blur-md text-white rounded-full p-3 transition-colors pointer-events-auto shadow-lg">
                 <i data-lucide="chevron-right" class="w-6 h-6"></i>
             </button>
         </div>
