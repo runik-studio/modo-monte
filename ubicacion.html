@@ -73,11 +73,11 @@
             class="w-full h-full object-cover transition-opacity duration-300">
 
         <button id="accesosBtn" onclick="nextSlide()"
-            class="absolute bottom-8 right-8 text-white font-arca-bold text-3xl md:text-5xl tracking-widest drop-shadow-lg flex items-center gap-2 hover:scale-105 transition-transform z-20 hidden">
+            class="absolute bottom-8 right-8 text-white font-arca-bold text-3xl md:text-5xl tracking-widest drop-shadow-lg flex items-center gap-2 hover:scale-105 transition-transform z-20">
             ACCESOS <i data-lucide="chevrons-right" class="w-8 h-8 md:w-12 md:h-12"></i>
         </button>
 
-        <div id="mapControls" class="absolute inset-x-0 top-1/2 -translate-y-1/2 z-20 hidden flex justify-between px-4 pointer-events-none md:inset-auto md:top-auto md:bottom-8 md:right-8 md:left-auto md:transform-none md:flex md:gap-4 md:px-0">
+        <div id="mapControls" class="absolute inset-x-0 top-1/2 -translate-y-1/2 z-20 flex justify-between px-4 pointer-events-none md:inset-auto md:top-auto md:bottom-8 md:right-8 md:left-auto md:transform-none md:flex md:gap-4 md:px-0">
             <button onclick="prevSlide()"
                 class="bg-white/30 hover:bg-white/50 backdrop-blur-md text-white rounded-full p-3 transition-colors pointer-events-auto shadow-lg">
                 <i data-lucide="chevron-left" class="w-6 h-6"></i>
@@ -220,8 +220,8 @@
                         "w-full h-full object-cover transition-opacity duration-300";
                     img.style.opacity = '1';
                 }
-                document.getElementById('accesosBtn').classList.toggle('hidden', slide.isMap);
-                document.getElementById('mapControls').classList.toggle('hidden', !slide.isMap);
+                document.getElementById('accesosBtn').style.display = slide.isMap ? 'none' : 'flex';
+                document.getElementById('mapControls').style.display = slide.isMap ? 'flex' : 'none';
 
                 lucide.createIcons();
             }, 150);
